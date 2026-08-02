@@ -115,16 +115,21 @@ the same spirit as the load balancing used for expert routing~\cite{he2026mordas
 \paragraph{Our approach.}
 We propose \emph{Dynamic Prototype Routing} (DPR), a drop-in replacement for the
 TAB routing that keeps the CATANet backbone and its external tensor interface
-unchanged while remaining in a comparable lightweight operating regime. DPR builds
-semantic prototypes directly from the current tokens via a soft assignment. It then
-confirms them with a learnable query bank, matches tokens back to the confirmed
-prototypes with a learnable temperature, and propagates an explicit per-token
-confidence through ordering and aggregation. The resulting network,
-\textbf{DPRNet}, is trained on DIV2K and evaluated on five standard benchmarks at
-$\times2/\times3/\times4$, where it maintains CATANet-level reconstruction quality
-with small gains on most benchmark cells and a comparable lightweight cost profile,
-while exposing an interpretable, confidence-aware routing
-mechanism.
+unchanged while remaining in a comparable lightweight operating regime. Rather than
+enlarging the network, our contribution is at the level of the routing mechanism:
+DPR turns center-based token routing into a confidence-aware process. It builds
+semantic prototypes directly from the current tokens via a soft assignment, confirms
+them with a learnable query bank that separates prototype generation from
+confirmation, matches tokens back to the confirmed prototypes with a learnable
+temperature, and propagates an explicit per-token confidence through ordering,
+gating, and a soft fallback, with a usage-balancing regularizer that guards against
+prototype collapse. The resulting network, \textbf{DPRNet}, is trained on DIV2K and
+evaluated on five standard benchmarks at $\times2/\times3/\times4$, where it maintains
+CATANet-level reconstruction quality with small gains on most benchmark cells and a
+comparable lightweight cost profile. Just as importantly, each mechanism is isolated
+by a controlled, multi-seed ablation and the learned routing is made interpretable
+through per-token confidence and prototype-usage diagnostics, so the improvement is
+attributable to the routing design itself rather than to added capacity.
 
 \paragraph{Contributions.}
 The main contributions are as follows.

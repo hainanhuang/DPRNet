@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.26)  28 JUL 2026 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.26)  1 AUG 2026 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,71 +585,71 @@ Package hyperref Info: Link coloring OFF on input line 27.
 \@outlinefile=\write5
 \openout5 = `main_els.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
  (/Users/bytedance/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (/Users/bytedance/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 74.
+(hyperref)                removing `\<def>-command' on input line 73.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cnotenum' on input line 74.
+(hyperref)                removing `\cnotenum' on input line 73.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 74.
+(hyperref)                removing `\<def>-command' on input line 73.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@corref' on input line 74.
+(hyperref)                removing `\@corref' on input line 73.
 
 [1
 
 
 {/Users/bytedance/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 74.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 73.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 74.
+(Font)              size <5> substituted on input line 73.
 
 (./sections/1_introduction.tex [2] [3] [4]) (./sections/2_method.tex [5] [6]
 Overfull \hbox (90.08505pt too wide) in paragraph at lines 110--116
@@ -666,13 +666,13 @@ Overfull \hbox (3.4236pt too wide) in paragraph at lines 220--166
 []\T1/cmr/m/n/12 DPR keeps the back-bone in-ter-face and pa-ram-e-ter bud-get in the lightweight
  []
 
-) (./figures/fig2_dpr.tex [9]) [10] (./sections/3_experiments_setup.tex
+[9]) (./figures/fig2_dpr.tex) [10] (./sections/3_experiments_setup.tex
 Overfull \hbox (42.94672pt too wide) in paragraph at lines 32--42
 \OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 40$\T1/cmr/m/n/12 . The num-ber of pro-to-type slots per block is $\OML/cmm/m/it/12 M \OT1/cmr/m/n/12 = [16\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 32\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 64\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 128\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 16\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 32\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 64\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 128]$\T1/cmr/m/n/12 ,
  []
 
 [11])
-Overfull \hbox (0.4103pt too wide) in paragraph at lines 59--83
+Overfull \hbox (0.4103pt too wide) in paragraph at lines 59--82
  []\T1/cmr/m/it/12 Efficiency mea-sure-ment..[] \T1/cmr/m/n/12 Pa-ram-e-ters, Multi-Adds (MACs re-ported by thop),
  []
 
@@ -920,15 +920,15 @@ Package rerunfilecheck Info: File `main_els.out' has not changed.
 Here is how much of TeX's memory you used:
  34428 strings out of 469158
  816812 string characters out of 5459505
- 1365957 words of memory out of 5000000
+ 1360947 words of memory out of 5000000
  62657 multiletter control sequences out of 15000+600000
  649532 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  104i,22n,111p,1083b,2347s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/bytedance/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></Users/bytedance/Library/TinyTeX/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main_els.pdf (37 pages, 10901196 bytes).
+Output written on main_els.pdf (37 pages, 10898511 bytes).
 PDF statistics:
- 1362 PDF objects out of 1440 (max. 8388607)
+ 1351 PDF objects out of 1440 (max. 8388607)
  686 compressed objects within 7 object streams
  170 named destinations out of 1000 (max. 500000)
  329 words of extra memory for PDF output out of 10000 (max. 10000000)

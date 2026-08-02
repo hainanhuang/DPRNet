@@ -2,7 +2,7 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\emailauthor{<<your_email@university.edu>>}{<<Your Name>>\corref {cor1}}
+\emailauthor{huanghainan.7@cug.edu.cn}{Hainan Huang\corref {cor1}}
 \Newlabel{cor1}{1}
 \Newlabel{a}{a}
 \citation{glasner2009single}
@@ -48,35 +48,35 @@
 \citation{he2026mordasr}
 \@writefile{toc}{\contentsline {paragraph}{Limitations of center-based routing.}{4}{section*.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Our approach.}{4}{section*.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Contributions.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{5}{section*.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Method}{5}{section.2}\protected@file@percent }
 \newlabel{sec:method}{{2}{5}{Method}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Overview}{5}{subsection.2.1}\protected@file@percent }
 \newlabel{sec:method_overview}{{2.1}{5}{Overview}{subsection.2.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Motivation: limitations of center-based routing}{6}{subsection.2.2}\protected@file@percent }
 \newlabel{sec:method_motivation}{{2.2}{6}{Motivation: limitations of center-based routing}{subsection.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Dynamic Prototype Routing}{6}{subsection.2.3}\protected@file@percent }
-\newlabel{sec:method_dpr}{{2.3}{6}{Dynamic Prototype Routing}{subsection.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Dynamic Prototype Routing}{7}{subsection.2.3}\protected@file@percent }
+\newlabel{sec:method_dpr}{{2.3}{7}{Dynamic Prototype Routing}{subsection.2.3}{}}
 \@writefile{toc}{\contentsline {paragraph}{(1) Dynamic prototype generation.}{7}{section*.7}\protected@file@percent }
 \newlabel{eq:assign}{{4}{7}{(1) Dynamic prototype generation}{equation.4}{}}
 \newlabel{eq:proto_content}{{5}{7}{(1) Dynamic prototype generation}{equation.5}{}}
 \@writefile{toc}{\contentsline {paragraph}{(2) Prototype confirmation by query refinement.}{7}{section*.8}\protected@file@percent }
 \newlabel{eq:proto_refine}{{7}{7}{(2) Prototype confirmation by query refinement}{equation.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{(3) Confidence-aware token-to-prototype matching.}{7}{section*.9}\protected@file@percent }
-\newlabel{eq:scores}{{8}{7}{(3) Confidence-aware token-to-prototype matching}{equation.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{(3) Confidence-aware token-to-prototype matching.}{8}{section*.9}\protected@file@percent }
+\newlabel{eq:scores}{{8}{8}{(3) Confidence-aware token-to-prototype matching}{equation.8}{}}
 \newlabel{eq:belong}{{9}{8}{(3) Confidence-aware token-to-prototype matching}{equation.9}{}}
 \@writefile{toc}{\contentsline {paragraph}{(4) Confidence-aware ordering.}{8}{section*.10}\protected@file@percent }
 \newlabel{eq:sortkey}{{10}{8}{(4) Confidence-aware ordering}{equation.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Confidence-aware aggregation (IASA)}{8}{subsection.2.4}\protected@file@percent }
 \newlabel{sec:method_iasa}{{2.4}{8}{Confidence-aware aggregation (IASA)}{subsection.2.4}{}}
-\newlabel{eq:iasa_gate}{{11}{8}{Confidence-aware aggregation (IASA)}{equation.11}{}}
+\newlabel{eq:iasa_gate}{{11}{9}{Confidence-aware aggregation (IASA)}{equation.11}{}}
 \@writefile{toc}{\contentsline {paragraph}{Soft prototype fallback.}{9}{section*.11}\protected@file@percent }
 \newlabel{eq:soft_fallback}{{12}{9}{Soft prototype fallback}{equation.12}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Prototype usage balancing}{9}{subsection.2.5}\protected@file@percent }
 \newlabel{sec:method_balance}{{2.5}{9}{Prototype usage balancing}{subsection.2.5}{}}
 \newlabel{eq:balance}{{13}{9}{Prototype usage balancing}{equation.13}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Discussion of design}{9}{subsection.2.6}\protected@file@percent }
-\newlabel{sec:method_design}{{2.6}{9}{Discussion of design}{subsection.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Discussion of design}{10}{subsection.2.6}\protected@file@percent }
+\newlabel{sec:method_design}{{2.6}{10}{Discussion of design}{subsection.2.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overall architecture of DPRNet, following the lightweight-SR backbone of CATANet. \textbf  {(a)}~A $3{\times }3$ convolution extracts shallow features $F_0$, which pass through a stack of $L{=}8$ DPRNet blocks; the deep features are added back through a global residual and reconstructed by a pixel-shuffle upsampler that is summed with a bilinearly upsampled base image. \textbf  {(b)}~Each block keeps the TAB--LRSA--fusion structure under a residual connection. \textbf  {(c)}~Inside a TAB, the only modified component is the routing module: DPR replaces center-based routing while preserving the input/output interface, and is expanded in Figure~\ref {fig:dpr}.}}{10}{figure.1}\protected@file@percent }
 \newlabel{fig:arch}{{1}{10}{Overall architecture of DPRNet, following the lightweight-SR backbone of CATANet. \textbf {(a)}~A $3{\times }3$ convolution extracts shallow features $F_0$, which pass through a stack of $L{=}8$ DPRNet blocks; the deep features are added back through a global residual and reconstructed by a pixel-shuffle upsampler that is summed with a bilinearly upsampled base image. \textbf {(b)}~Each block keeps the TAB--LRSA--fusion structure under a residual connection. \textbf {(c)}~Inside a TAB, the only modified component is the routing module: DPR replaces center-based routing while preserving the input/output interface, and is expanded in Figure~\ref {fig:dpr}}{figure.1}{}}
 \citation{agustsson2017div2k}

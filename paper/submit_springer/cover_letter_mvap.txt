@@ -1,0 +1,75 @@
+Cover Letter — Machine Vision and Applications (MVAP)
+
+August 1, 2026
+
+Dear Editor-in-Chief and Editors of Machine Vision and Applications,
+
+We are pleased to submit our manuscript entitled "Dynamic Prototype Routing for
+Lightweight Image Super-Resolution" for consideration as a research article in
+Machine Vision and Applications.
+
+Single image super-resolution is a core machine-vision building block: it is used to
+recover fine detail for downstream recognition, inspection, and display on devices where
+memory, latency, and energy are tightly constrained. This deployment setting makes
+lightweight SR — a favorable trade-off between reconstruction quality and model cost —
+the practically relevant regime, and it is the regime this paper targets.
+
+Content-aware token routing is a promising way to reach that trade-off, and the recent
+CATANet is a strong representative: its Token Aggregation Block (TAB) groups semantically
+related tokens before attention. Our contribution is at the level of the routing
+mechanism rather than at the level of network capacity. We show that the TAB router has
+four concrete, analyzable weaknesses — cross-batch exponential-moving-average (EMA)
+centers that lag per-image content, hard argmax assignment labels that discard
+confidence, an intra-cluster ordering with no purity constraint, and an entangled
+prototype update/confirmation step — and we replace it with Dynamic Prototype Routing
+(DPR), a drop-in module that keeps the CATANet backbone and its external tensor interface
+unchanged. The main contributions are:
+
+  1. Dynamic, per-image prototypes formed directly from the current tokens by a soft,
+     assignment-weighted aggregation, removing the cross-batch EMA center buffer.
+  2. Decoupled prototype confirmation via a learnable query bank, separating prototype
+     generation from confirmation for more stable and interpretable routing slots.
+  3. Confidence-aware routing: the retained per-token assignment confidence modulates
+     token ordering, a global gate, and a soft prototype fallback.
+  4. A learnable, bounded routing temperature together with a usage-balancing
+     regularizer that prevents prototype-slot collapse.
+
+We are deliberately transparent about the scope of our claims, since we believe this is
+where the contribution is best judged and evaluated. On five standard benchmarks at
+x2/x3/x4, DPRNet matches CATANet-level accuracy with small but consistent gains on most
+benchmark cells (e.g., 26.89 dB on Urban100 at x4). DPR adds a modest cost over CATANet
+(660K vs 535K parameters; 52.14G vs 46.8G Multi-Adds under a common 256x256-input
+protocol), so we do not claim an efficiency advantage over CATANet; rather, DPRNet stays
+firmly in the lightweight regime and uses markedly fewer Multi-Adds than the lightweight
+Transformer baselines SwinIR-light (60.3G) and SRFormer-light (56.5G). The value of DPR
+is that it trades this small, well-characterized cost for an interpretable,
+confidence-aware routing mechanism. To support this, we report multi-seed (3-seed, mean
++/- std) ablations that (i) directly show dynamic prototypes outperform a re-implemented
+EMA history-center variant under a matched protocol, and (ii) show the balancing loss
+makes prototype usage both more balanced and more stable across seeds, together with
+routing diagnostics (usage entropy, learned temperature, per-token confidence, and
+per-block cluster-assignment maps).
+
+Because DPR is a plug-and-play, interface-preserving module, it is directly reusable in
+other window-attention vision backbones. We believe this combination — a reusable
+content-routing component, an honest efficiency/accuracy characterization, and
+mechanism-level interpretability analysis on a practically important vision task — fits
+the scope and readership of Machine Vision and Applications well.
+
+This manuscript is original, has not been published previously, and is not under
+consideration for publication elsewhere. All authors have read and approved the
+manuscript and agree to its submission. The authors declare no competing interests. The
+datasets used (DIV2K, Set5, Set14, BSD100, Urban100, Manga109) are all publicly
+available; no new data were generated in this study.
+
+We suggest the following areas of expertise for reviewers: lightweight/efficient image
+super-resolution, vision Transformers for image restoration, and content-aware token
+routing / clustering.
+
+Thank you for your time and consideration. We look forward to your response.
+
+Sincerely,
+
+Hainan Huang (corresponding author), on behalf of all authors
+China University of Geosciences (Wuhan), Wuhan, China
+huanghainan.7@cug.edu.cn

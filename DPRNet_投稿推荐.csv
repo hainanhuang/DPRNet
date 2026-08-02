@@ -1,8 +1,13 @@
-优先级,期刊/会议,名单级别,类型,费用,审稿周期,中稿概率,适配理由,官网投稿链接
-首选,Neurocomputing,T2,期刊(SCI),免费,3-5月,中高 55-65%,"SR审稿池最熟GRFormer同刊;认""打平+可解释+3seed消融"";免费又T2性价比之王",https://www.editorialmanager.com/neucom/
-稳妥,CVIU (Computer Vision and Image Understanding),T3,期刊(SCI),免费,5-7月,中 45-55%,CV底层特征+可解释性对口适合突出动态原型数学设计;免费但慢,https://www.editorialmanager.com/cviu/
-稳妥,The Visual Computer,T3,期刊(SCI),免费,4-6月,中高 约60%,图形/视觉对增量创新宽容超分常见;免费,https://www.editorialmanager.com/tvcj/
-稳妥,Applied Soft Computing,T2,期刊(SCI),免费(订阅),4-6月,中 约50%,"T2免费;需把""学习式路由/均衡损失""往软计算角度写",https://www.editorialmanager.com/asoc/
-快速兜底,Pattern Recognition Letters,T3,期刊(SCI短文),免费,3-5月,中高 约60%,短快接收方法类改进;篇幅受限消融需精简,https://www.editorialmanager.com/prletters/
-快速兜底,Machine Vision and Applications,T4,期刊(SCI),免费,4-6月,高 约65%,门槛较低视觉应用;稳达标,https://www.editorialmanager.com/mvap/
-快速兜底,Journal of Real-Time Image Processing,T3,期刊(SCI),有APC,4-6月,中高 约60%,"主打""轻量/实时""正对口你的Multi-Adds卖点",https://www.editorialmanager.com/rtip/
+排序(按中稿概率),期刊/会议,名单级别,类型,费用,审稿周期,中稿概率,适配理由,官网投稿链接
+1,Machine Vision and Applications,T4,期刊(SCI),免费,4-6月,高 约70%,【首投】门槛最低最认""工程改进+完整实验""不挑新意;3seed消融远超其平均;免费稳达标,https://link.springer.com/journal/138 (新版投稿平台 submission.springernature.com;article type选Research)
+2,The Visual Computer,T3,期刊(SCI),订阅制免费(OA可选),4-6月,中高 约60%,【备投】同为Springer与MVAP零重排;图形/视觉对增量宽容超分常见desk reject率低,https://www.editorialmanager.com/tvcj/
+3,Multimedia Tools and Applications,T3,期刊(SCI),订阅制免费(OA约3790美元),4-8月,中高 约65%,量大门槛友好对工程改进宽容历史接收率高;免费通道可用,https://www.editorialmanager.com/mmta/
+4,Pattern Recognition Letters,T3,期刊(SCI短文),免费,3-5月,中高 约55%,短快接收方法类改进免费;篇幅受限消融需精简,https://www.editorialmanager.com/prletters/
+5,CVIU (Computer Vision and Image Understanding),T3,期刊(SCI),免费,5-7月,中 约50%,CV底层+可解释性对口可复用现成elsarticle稿;但同Elsevier体系更看重新意,https://www.editorialmanager.com/cviu/
+6,Complex & Intelligent Systems,T2,期刊(SCI),免费OA,3-5月,中 约45%,T2且免费OA;但门槛更高需往""智能系统""角度包装新意要求高,https://www.editorialmanager.com/cais/
+7,Pattern Recognition,T1,期刊(SCI),免费,6-9月,中低 25-35%,唯一值得赌的高档且免费;但T1对追平型偏难需先做机制包装,https://www.editorialmanager.com/pr/
+避免,IET Image Processing,T4,期刊(SCI),纯Gold OA APC约2800美元(约2万元),3-4月,高 约70%,门槛低最快见刊但纯OA无免费通道APC超预算;若愿付费再考虑,https://mc.manuscriptcentral.com/theietresearch
+避免,Journal of Real-Time Image Processing,T3,期刊(SCI),有APC,4-6月,中高 约60%,主打轻量/实时正对口卖点但需APC;免费刊优先,https://www.editorialmanager.com/rtip/
+避免,Neurocomputing / Neural Networks / Applied Soft Computing,T2,期刊(SCI),免费,-,低(方向错配),通用神经网络/学习/软计算刊;本文属CV应用易被判机制新意不足(已在#1 desk reject),-
+避免,Sensors / Entropy等MDPI,T3,期刊(SCI),APC约CHF2600(超预算),-,不选,APC超预算且方向非最优;仅Applied Sciences可作最后保底,-
+避免,TIP / TPAMI / CVPR / ICCV / ECCV,T1-T2,期刊/会议,-,-,低 <15%,追平型稿件冲顶不现实需碾压SOTA或强理论,-

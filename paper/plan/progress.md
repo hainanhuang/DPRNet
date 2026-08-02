@@ -3,6 +3,49 @@
 > 本文件有两个作用：(1) 实时记录进度；(2) 让下一次 AI 会话能快速看懂并接手。
 > 每次有实质进展，请更新「进度日志」与「当前快照」两节。
 
+> 📮 **投稿状态**：稿件已进入投稿阶段，逐次投稿台账见 `paper/plan/submission-log.md`。
+> 最新：**#2 Machine Vision and Applications（MVAP，Springer/T4/免费）已于 2026-08-02 成功投稿**，
+> 用 `main_springer`（article 单栏源）+ `cover_letter_mvap.pdf`，等待编辑初筛/送审。
+> （#1 Neurocomputing 2026-08-01 desk reject + ATS Declined。）备投 = The Visual Computer（被拒即转）。
+
+---
+
+## 2026-08-02 · #2 MVAP 成功投稿（Springer，T4，免费）
+
+- **已成功投稿 Machine Vision and Applications**（Springer 新版投稿平台 `submission.springernature.com`，
+  article type = Research）。这是 desk reject 后确立的"两个免费 Springer 刊，先投一个、被拒即转"策略的首投。
+- **投稿件**：`paper/main_springer.tex`（标准 article 12pt 单栏，`lmodern`+T1 绕过沙箱 pk 字体限制；
+  复用全部 shared sections/tables/figures + 价值锚点重构版摘要/引言）。编译 33 页、0 undefined、44 条参考文献。
+  平台以 LaTeX 源 zip 上传（`manuscript_latex_source.zip`，含预编译 .bbl，服务端自行编译）。
+- **Cover letter**：`cover_letter_mvap.pdf`（本轮新建 .tex 源并编译，2 页；正面预防"新意不足"，
+  突出 TAB 四缺陷 → DPR 机制贡献 → 即插即用 → 诚实精度/效率刻画 → 3-seed 消融）。
+- **投稿页逐项决策记录**：
+  · Article type = **Research**（非 Brief Report，避免砍消融）；
+  · Files 页传 **LaTeX 源 zip**（平台服务端编译，非传 PDF）；图/补充材料初投不单独上传；
+  · Details 页 Title/Abstract 与稿件逐字一致，Collection 留空；
+  · Authors：H.H.（通讯，`huanghainan.7@cug.edu.cn` 机构邮箱）+ X.L.（第二作者）；
+  · Author Contributions Statement 用 initials 叙述（H.H./X.L.，取代稿件内 CRediT）；
+  · Third party material 选 **No**（结果图为自制、底图为公开 benchmark 且正文已引用，无需许可）。
+- **作者信息**：Hainan Huang（黄海南，通讯）+ Xiang Li（李向，第二），China University of Geosciences (Wuhan)。
+- **下一步**：等待 MVAP 编辑初筛结果。若被拒 → 同一 `main_springer` 稿零重排转投 **The Visual Computer**
+  （换 `cover_letter_tvcj.pdf` 即可）。台账详见 `submission-log.md`。
+
+---
+
+## 2026-08-01 · Neurocomputing desk reject（首投受挫，转/重投决策）
+
+- 首投 Neurocomputing（elsarticle 单栏 `main_els`，2026-07-29）于 2026-08-01 收到**编辑级 desk reject**
+  （初筛未送外审）+ Elsevier **Article Transfer Service** 转投 offer（答复截止 2026-08-30）。
+- 拒稿理由：稿件被视为"现有算法的直接应用"，"对 Neural Networks / Learning systems 的独特贡献偏弱"。
+  归因：Neurocomputing 偏神经网络/学习系统方法贡献，本文是 CV/图像超分**工程模块替换 + 精度追平**，
+  范围契合与新意感知不足；与既有软肋（"追平精度 + 更重"）一致，非数据/写作硬伤。
+- 新建投稿台账 `paper/plan/submission-log.md`（投稿一览表 + 详细记录 + 投稿漏斗串行策略）。
+- 待用户确认的下一步（详见 submission-log.md）：
+  1. ATS 转投仅限 **T4+ 名单内的 CV/图像刊**（勿转通用 ML/NN 刊）；
+  2. 投稿前做**价值锚点重构**（卖点从"追平精度"→"可解释/抗坍缩置信度路由 + 即插即用 + 3-seed 消融"）+ 换针对性 Cover Letter；
+  3. 若 Decline，首选 **CVIU**（T3/Elsevier/免费/复用 elsarticle），备选 The Visual Computer / MVAP（Springer/免费）。
+- 本轮仅新增记录文件，未改动稿件正文/数据/参考文献。
+
 ---
 
 ## 2026-07-06 · from-scratch 3-seed 消融结果回填（C1–C4 全部落地）

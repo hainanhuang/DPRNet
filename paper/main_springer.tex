@@ -1,0 +1,138 @@
+% =====================================================================
+% DPRNet -- Springer SUBMISSION build (shared for Machine Vision and
+% Applications [MVAP] and The Visual Computer [TVCJ]).
+% Created 2026-08-01.
+%
+% WHY a standard article class instead of sn-jnl.cls:
+%   The Springer Nature class file (sn-jnl.cls) is distributed only via
+%   Springer's own site / Overleaf and is NOT on CTAN; it could not be
+%   fetched in this environment. Per the official author guidelines
+%   (verified 2026-08-01):
+%     - MVAP accepts LaTeX OR Word source and does NOT force the exact
+%       template layout; it only requires *editable source* + a compiled
+%       PDF at first submission.
+%     - The Visual Computer follows Springer's standard first-submission
+%       policy (editable source; formatting finalized after acceptance).
+%   A single-column 12pt article source therefore satisfies "editable
+%   source" for first submission. If the paper reaches revision/acceptance,
+%   re-typeset into sn-jnl.cls ([iicol]) then.
+%
+% Reuses the SAME shared sources as the CVPR (main.tex), MDPI
+% (main_mdpi.tex), and Elsevier (main_els.tex) builds:
+%   sections/*  tables/*  figures/*  references.bib
+%
+% Target journal: switch \dprjournal below when uploading.
+%
+% Compile:
+%   pdflatex main_springer ; bibtex main_springer ; pdflatex main_springer ; pdflatex main_springer
+% =====================================================================
+\documentclass[12pt]{article}
+
+% ---- fonts: Latin Modern provides Type1 CM + TC (TS1) glyphs, so pdflatex does
+% NOT need to generate pk bitmap fonts (tcrm*/ecrm*). Required here because the
+% default article Computer Modern triggers on-the-fly pk generation, which this
+% sandbox blocks; the Times-based els/mdpi/cvpr builds never hit it.
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% ---- page geometry: single column, generous margins (review-friendly) ----
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[numbers,sort&compress]{natbib}   % Springer Nature Basic style is numeric
+\bibliographystyle{unsrtnat}                  % numeric, cited-order (Springer-compatible;
+                                              % sn-jnl.cls not on CTAN in this env)
+
+\input{preamble_els}   % shared extra packages for figures/tables (amsmath, booktabs, multirow, float, pifont, pgfplots, tikz, dprblue/dpramber, \TODO ...)
+
+\title{\bfseries Dynamic Prototype Routing for Lightweight Image Super-Resolution}
+
+\author{
+  Hainan Huang\thanks{Corresponding author: \texttt{huanghainan.7@cug.edu.cn}} \and
+  Xiang Li \\[2pt]
+  \normalsize China University of Geosciences (Wuhan), Wuhan, China
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Lightweight single image super-resolution (SR) must balance reconstruction quality with
+model cost on resource-constrained platforms. Content-aware routing improves this balance
+by grouping semantically related tokens, yet the widely used center-based router---the
+Token Aggregation Block (TAB) of CATANet---relies on cross-batch exponential-moving-average
+centers, hard assignment labels, and a coupled prototype update/confirmation step, tying
+routing to a drifting historical state and discarding assignment confidence. We revisit
+token routing itself and propose \emph{Dynamic Prototype Routing} (DPR), a confidence-aware,
+drop-in replacement for the TAB routing that keeps the CATANet backbone and tensor interface
+unchanged. DPR builds per-image prototypes directly from the current tokens, decouples
+prototype generation from confirmation through a learnable query bank, matches tokens with a
+bounded learnable temperature, and carries the resulting assignment confidence into token
+ordering, global gating, and a soft fallback, with a usage-balancing regularizer that
+discourages prototype-slot collapse. Trained on DIV2K and evaluated on five standard
+benchmarks at $\times2/\times3/\times4$, DPRNet matches CATANet-level accuracy with small
+gains on most benchmark cells while staying in the lightweight regime; at $\times4$, for
+example, it obtains $26.89$\,dB on Urban100 with $52.14$\,G Multi-Adds, fewer than the
+lightweight Transformer baselines SwinIR-light and SRFormer-light under the same input
+convention. Three-seed ablations isolate each design choice: the dynamic prototypes
+outperform a history-center EMA variant under an identical protocol, and the balancing loss
+makes prototype usage more balanced and more stable across seeds. DPR thus offers a reusable,
+interpretable alternative to center-based token routing rather than a larger backbone.
+\end{abstract}
+
+\noindent\textbf{Keywords:} image super-resolution \textperiodcentered\ lightweight
+super-resolution \textperiodcentered\ content-aware routing \textperiodcentered\ dynamic
+prototype routing \textperiodcentered\ vision transformer \textperiodcentered\ self-attention
+
+\bigskip
+
+\input{sections/1_introduction}
+\input{sections/2_method}
+\input{figures/fig1_architecture}
+\input{figures/fig2_dpr}
+
+% ---- Experiments ----
+\input{sections/3_experiments_setup}
+\input{sections/3_experiments_comparison}
+\input{tables/table1_main_comparison}
+\input{tables/table2_efficiency}
+\input{sections/3_experiments_efficiency}
+\input{figures/fig3_psnr_params}
+\input{sections/3_experiments_visual}
+\input{figures/fig7_visual}
+\input{sections/3_experiments_ablation}
+\input{tables/table_c1_dpr_vs_ema}
+\input{tables/table3_ablation_a1}
+\input{tables/table4_ablation_a2}
+\input{tables/table5_ablation_a3}
+\input{sections/3_experiments_routing_analysis}
+\input{figures/fig5_xscore_hist}
+\input{figures/fig6_usage_entropy}
+\input{figures/fig8_cluster_maps}
+\input{sections/4_discussion}
+\input{sections/5_conclusion}
+
+%%%%%%%%% BACK MATTER (Springer style: declarations after conclusion)
+\section*{Declarations}
+
+\paragraph{Author contributions.}
+Hainan Huang: conceptualization, methodology, software, validation, formal analysis,
+investigation, data curation, writing -- original draft, visualization. Xiang Li:
+conceptualization, supervision, funding acquisition, resources, writing -- review \&
+editing, project administration.
+
+\paragraph{Competing interests.}
+The authors declare that they have no competing interests.
+
+\paragraph{Data availability.}
+The datasets used in this study are all publicly available: the DIV2K training set and the
+Set5, Set14, BSD100, Urban100, and Manga109 benchmarks. No new data were generated. The code
+and trained models are not publicly available due to institutional restrictions.
+
+%%%%%%%%% REFERENCES
+\bibliography{references}
+
+\end{document}
