@@ -12,8 +12,9 @@
 | # | 目标刊 | 级别 | 出版社 | 投稿日 | 稿件版本 | 状态 | 结果日期 | 结果 |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Neurocomputing | T2 | Elsevier | 2026-07-29 | `main_els`（elsarticle 单栏） | ❌ Desk reject → **拒绝转投(ATS Declined)** | 2026-08-01 | 编辑初筛拒稿，转投候选无对口刊，已选 Do not transfer |
-| 2 | **Machine Vision and Applications (MVAP)** | T4 | Springer | **2026-08-02** | `main_springer`（价值锚点重构版） | ✅ **已投稿，待编辑初筛** | — | **免费**；T4 达标毕业；中稿概率最高（~70%） |
-| 3 | The Visual Computer (TVCJ) | T3 | Springer | 计划中（备投） | `main_springer`（同一稿，换 Cover Letter） | ⏳ 备用 | — | **免费**；MVAP 被拒即转，稿件零重排 |
+| 2 | **Machine Vision and Applications (MVAP)** | T4 | Springer | **2026-08-02** | `main_springer`（价值锚点重构版） | ↩️ **作者主动撤稿** | **2026-09-01** | 撤稿时页面仍显示 `With editor`；因毕业时限不能接受预期长周期而撤回，非拒稿 |
+| 3 | **Computers & Graphics** | T4 | Elsevier | 待投稿 | `main_els` 待改为 C&G 双匿名投稿版 | 🛠️ **当前目标，准备中** | — | 订阅发表无 APC；历史指标约 78 天实质审稿、105 天投稿到录用 |
+| 4 | The Visual Computer (TVCJ) | T3 | Springer | 计划中（备投） | `main_springer`（同一正文，换 Cover Letter） | ⏳ 备用 | — | 订阅发表无 APC；作为 C&G 未录用后的下一站 |
 
 ---
 
@@ -73,7 +74,7 @@
 
 ---
 
-### 投稿 #2 — Machine Vision and Applications（Springer，T4）✅ 已投稿
+### 投稿 #2 — Machine Vision and Applications（Springer，T4）↩️ 已撤稿
 
 - **标题**：Dynamic Prototype Routing for Lightweight Image Super-Resolution
 - **通讯作者**：Hainan Huang（黄海南），China University of Geosciences (Wuhan)，`huanghainan.7@cug.edu.cn`；第二作者 Xiang Li（李向）
@@ -91,8 +92,28 @@
   - **Third party material**：选 **No**（结果图为自制、底图为公开 benchmark 且正文已 `\cite` 六个数据集，无需版权许可）。
   - **Competing interests**：无；**Data availability**：公开数据集、无新数据、代码因机构限制不公开。
 - **稿件技术要点**：标准 `article` 12pt 单栏（`sn-jnl.cls` 不在 CTAN 无法获取，Springer 首投不强制模板）；`lmodern`+`T1` 绕过沙箱 pk 字体生成；复用全部 shared sections/tables/figures + 价值锚点重构版摘要/引言。编译 **33 页、0 undefined、44 条参考文献**。
-- **当前状态**：⏳ **待编辑初筛 / 送外审**。
-- **下一步（若被拒）**：同一 `main_springer` 稿**零重排**转投 **The Visual Computer**，仅换 `cover_letter_tvcj.pdf`；投稿页各项照本记录复用。
+- **撤稿前状态**：页面显示 **With editor**，未显示已进入同行评审。
+- **撤稿日期**：**2026-09-01**。
+- **撤稿性质**：作者因毕业时间约束主动撤回，**不是编辑拒稿**；原投稿不得与下一刊形成重叠投稿。
+- **撤稿后状态**：用户已确认撤稿完成，可以开始下一刊投稿流程。
+- **下一步**：转投 **Computers & Graphics**。现有 Elsevier 稿件可作为基础，但该刊采用双匿名评审，不能直接上传当前含作者身份的 `main_els.pdf`。
+
+---
+
+### 目标 #3 — Computers & Graphics（Elsevier，T4）🛠️ 准备中
+
+- **选择理由**：学校名单名为 `COMPUTERS & GRAPHICS-UK`，T4；选择订阅发表路线无 APC。已核验的历史指标约为实质审稿 78 天、投稿到录用 105 天，但不保证单篇时长。
+- **投稿入口**：<https://www.editorialmanager.com/CAG>
+- **评审方式**：双匿名。匿名主稿必须删除作者、单位、邮箱、致谢、基金及其他可识别身份的信息；作者信息单独放入 title page。
+- **当前可复用基础**：`main_els.tex`、`preamble_els.tex`、共享的 sections/tables/figures、`highlights_els.txt` 和利益冲突声明。
+- **提交前要完成**：
+  1. 将 `main_els` 从 Neurocomputing 定制版改为 C&G 版本，并生成匿名审稿 PDF；
+  2. 单独制作 title page、C&G cover letter、highlights 和 Declaration of Interest；
+  3. 按实际使用情况准备 generative-AI 写作声明，不能遗漏或虚构；
+  4. 清理 PDF 元数据和文件名中的作者身份，核对匿名正文无单位、邮箱、基金或致谢；
+  5. 在 Editorial Manager 选择 Research paper；若投稿阶段未询问开放方式，则在录用后选择订阅发表；
+  6. 上传前独立编译投稿包，检查引用、图表、页数和匿名性。
+- **官方要求**：<https://www.elsevier.com/journals/computers-and-graphics/0097-8493/guide-for-authors>
 
 ---
 
@@ -102,17 +123,20 @@
 
 ```
 #1 Neurocomputing (T2, Elsevier)  ❌ desk reject 2026-08-01
-      │  （价值锚点重构 + 换 Cover Letter；放弃 Elsevier 体系，避免连续错配）
+      │  （价值锚点重构 + 换 Cover Letter）
       ▼
-#2 Machine Vision and Applications (T4, Springer, 免费)  ✅ 已投稿 2026-08-02，待初筛
-      │  被拒即转（同一 main_springer 稿，仅换 cover letter）
+#2 Machine Vision and Applications (T4, Springer, 免费)  ↩️ 2026-09-01 作者主动撤稿
+      │  （毕业时限不能接受预期长周期；非拒稿）
       ▼
-#3 The Visual Computer (T3, Springer, 免费)  ← 备投，稿件零重排
+#3 Computers & Graphics (T4, Elsevier, 订阅免费)  🛠️ 当前目标，待制作双匿名投稿包
       │  被拒 → 转下一个
       ▼
-保底 Applied Sciences (T3, MDPI, 2–3月最快, APC≈¥2.1万)
+#4 The Visual Computer (T3, Springer, 订阅免费)
+      │  被拒 → 转付费快线
+      ▼
+保底 Algorithms (T4, MDPI, APC CHF 1800)
 ```
 
-- 模板成本：**MVAP↔TVCJ 同为 Springer，共用 `main_springer` 稿件，转投零重排**；跨到 MDPI 保底才需换模板。
-- Springer 首投接受可编辑源（标准 article 类即可），录用后再套 `sn-jnl.cls [iicol]` 排版。
-- 详见推荐表 `DPRNet_投稿推荐.csv`（含各刊级别/费用/周期/中稿概率/官网链接）。
+- 模板成本：C&G 可复用现有 Elsevier 源文件，但必须拆分匿名主稿和 title page；TVCJ 可复用 `main_springer` 正文。
+- C&G 与 TVCJ 均选择订阅发表路线，无 APC；Algorithms 是接受付费时的快速保底。
+- 详见推荐表 `DPRNet_投稿推荐.csv`（含各刊级别、费用、周期、可行性和来源链接）。

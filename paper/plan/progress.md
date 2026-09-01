@@ -4,9 +4,29 @@
 > 每次有实质进展，请更新「进度日志」与「当前快照」两节。
 
 > 📮 **投稿状态**：稿件已进入投稿阶段，逐次投稿台账见 `paper/plan/submission-log.md`。
-> 最新：**#2 Machine Vision and Applications（MVAP，Springer/T4/免费）已于 2026-08-02 成功投稿**，
-> 用 `main_springer`（article 单栏源）+ `cover_letter_mvap.pdf`，等待编辑初筛/送审。
-> （#1 Neurocomputing 2026-08-01 desk reject + ATS Declined。）备投 = The Visual Computer（被拒即转）。
+> 最新：**#2 Machine Vision and Applications（MVAP，Springer/T4）已于 2026-09-01 由作者主动撤稿**；
+> 撤稿时平台仍显示 `With editor`，撤稿原因是毕业时限不能接受预期长周期，非编辑拒稿。
+> 当前目标为 **#3 Computers & Graphics（Elsevier/T4，订阅发表无 APC）**，待制作双匿名投稿包。
+
+---
+
+## 2026-09-01 · #2 MVAP 主动撤稿，转投目标改为 Computers & Graphics
+
+- **状态变更**：用户确认 MVAP 已撤稿。投稿日期为 2026-08-02，撤稿日期为 2026-09-01；
+  撤稿前状态为 `With editor`，系统未显示已进入同行评审。
+- **性质**：这是作者基于毕业时间约束作出的主动撤稿，不记录为拒稿。
+- **当前目标**：`Computers & Graphics`（学校名单名 `COMPUTERS & GRAPHICS-UK`，T4）。
+  采用订阅发表路线时无 APC；历史指标约为实质审稿 78 天、投稿到录用 105 天，但不保证单篇周期。
+- **不能直接提交现有文件的原因**：C&G 采用双匿名评审；当前 `main_els.tex` 包含作者、
+  单位、邮箱和作者贡献等身份信息，需要拆分为匿名主稿与单独 title page。
+- **下一步执行顺序**：
+  1. 以 `main_els.tex` 为基础建立 C&G 匿名稿；
+  2. 制作 title page、C&G cover letter、highlights 和 Declaration of Interest；
+  3. 按实际使用情况准备 generative-AI 写作声明；
+  4. 独立编译并进行匿名性、引用、图表和文件完整性检查；
+  5. 通过 <https://www.editorialmanager.com/CAG> 提交 Research paper；
+  6. 录用后选择订阅发表路线；提交成功后把台账状态改为“已投稿”并记录稿件编号。
+- **串行投稿约束**：MVAP 撤稿完成后方可提交 C&G；后续仍坚持一稿一投。
 
 ---
 
@@ -27,8 +47,8 @@
   · Author Contributions Statement 用 initials 叙述（H.H./X.L.，取代稿件内 CRediT）；
   · Third party material 选 **No**（结果图为自制、底图为公开 benchmark 且正文已引用，无需许可）。
 - **作者信息**：Hainan Huang（黄海南，通讯）+ Xiang Li（李向，第二），China University of Geosciences (Wuhan)。
-- **下一步**：等待 MVAP 编辑初筛结果。若被拒 → 同一 `main_springer` 稿零重排转投 **The Visual Computer**
-  （换 `cover_letter_tvcj.pdf` 即可）。台账详见 `submission-log.md`。
+- **当时计划**：等待 MVAP 编辑初筛；若被拒则转投 The Visual Computer。该计划已由
+  2026-09-01 的主动撤稿与 C&G 转投决策取代。
 
 ---
 
@@ -1487,3 +1507,71 @@
   - `python3` 检查所有 figure/table 环境的 caption 数量。
 - Remaining risk: 作者元信息按用户要求未处理；MDPI 平台级 back-matter 字段和
   AI 使用披露需由作者按实际情况确认。
+
+### 2026-08-30 · 快审投稿目标重新核验
+
+- 以仓库根目录 `计算机科学与技术.xlsx` 为硬门槛，逐项确认候选均为 T4 及以上。
+- 重写 `DPRNet_投稿推荐.csv`，删除无来源的主观中稿概率，改用出版社公开接受率、
+  投稿到录用时间、实质外审时间和明确标注的第三方众包数据。
+- 新的免费主线为 The Visual Computer；低成本快审备选为 IJPRAI。
+- IET Image Processing 与 Applied Sciences 作为约人民币 2 万元级付费快线保留。
+- JRTIP 仅在补充同硬件基线延迟、FPS 和应用时限论证后考虑；其官网明确说明仅报告
+  processing time 不构成充分的 real-time 论证。
+- 排除 PRL、CVIU、PAAA、EURASIP JIVP 等周期证据不满足要求的旧候选。
+- 截至核验日，WACV 2027、3DV 2027、ACCV 2026、BMVC 2026 的全文投稿窗口均已关闭，
+  因此本轮不推荐会议路线。
+- 截至 2026-08-30，MVAP 尚未确认撤稿；该限制已在 2026-09-01 撤稿完成后解除。
+
+### Capability-use audit（2026-08-30 venue recommendation refresh）
+
+- Required skills: research-writing-assistant, using-research-writing, peer-review, verification,
+  TRAE-browseruse.
+- Skills actually used: 已读取并应用上述技能；按投稿适配、自审和可追溯证据要求执行。
+- Inputs consumed: `计算机科学与技术.xlsx`, `DPRNet_投稿推荐.csv`,
+  `paper/plan/submission-log.md`, `paper/plan/project-overview.md`,
+  `paper/sections/0_abstract.tex`, `paper/sections/3_experiments_efficiency.tex`,
+  `paper/tables/table2_efficiency.tex`，以及 Springer Nature、Wiley/IET、MDPI、
+  World Scientific、IEEE SPS、Taylor & Francis 和相关会议官网。
+- Inputs not used and why: 未修改论文正文、模板或投稿台账；本轮只重建推荐清单。
+  截至该次核验时 MVAP 尚无已完成撤稿的事实证据；此状态已于 2026-09-01 更新。
+- Artifacts produced: 重写后的 `DPRNet_投稿推荐.csv` 与本审计记录。
+- Verification run:
+  - 用 `openpyxl` 解析学校名单并逐项核对推荐刊名与 T 等级。
+  - 用 Python `csv` 模块验证所有记录列数一致。
+  - `git diff --check -- DPRNet_投稿推荐.csv paper/plan/progress.md`。
+- Remaining risk: 出版商时效是历史中位数或均值，不是个案承诺；The Visual Computer
+  与 IJPRAI 的完整录用周期缺少出版社官方中位数，因此同时标注了众包数据口径。
+
+### 2026-08-30 · 投稿目标第二轮全量检索
+
+- 扫描 `计算机科学与技术.xlsx` 全部 570 个 T1--T4 条目，并对跨领域但可能接收
+  图像算法的候选补做筛查，不再只依赖期刊名中的 image/vision 关键词。
+- 新增免费首选 `Computers & Graphics`（名单 T4）：出版社数据为 review time
+  78 天、submission-to-acceptance 105 天，且 2026 年有直接 SISR 论文。
+- 新增付费快线 `Algorithms`（名单 T4）：APC CHF 1800；官网 2026 上半年
+  首决定约 17.6 天；近期轻量 SISR 论文投稿到录用 38 天。
+- 新增中文路线《中国图象图形学报》（名单写作《中国图像图形学报》，T4）：
+  官网称审稿一般 2 个月以内、投稿到发表约 6 个月，最高 APC 15000 元。
+- 对 31 篇 Springer 近期论文的公开 Received/Accepted 日期进行抽查，确认
+  Applied Intelligence、Neural Computing & Applications、IJMLC、MTAP、PAAA
+  的短首页指标不能代表完整录用周期。
+- 详细方法、样本 DOI、来源和风险边界见
+  `paper/plan/review/venue-search-audit-2026-08-30.md`。
+
+### Capability-use audit（2026-08-30 comprehensive venue search）
+
+- Required skills: research-writing-assistant, using-research-writing, peer-review,
+  verification, TRAE-browseruse.
+- Skills actually used: 已读取并应用全部上述技能；使用浏览器快照核查动态页面，并以
+  WebSearch/WebFetch、出版社页面、公开文章历史及名单原表交叉验证。
+- Inputs consumed: `计算机科学与技术.xlsx`, `DPRNet_投稿推荐.csv`,
+  `paper/sections/0_abstract.tex`, `paper/sections/3_experiments_efficiency.tex`,
+  `paper/tables/table2_efficiency.tex`, 主要出版社及期刊官网、近期文章页和会议官网。
+- Inputs not used and why: 未修改论文正文或投稿台账；该轮任务只更新选刊结论。
+  当时 MVAP 是否已正式撤稿仍待确认；此状态已于 2026-09-01 更新。
+- Artifacts produced: 第二版 `DPRNet_投稿推荐.csv`；
+  `paper/plan/review/venue-search-audit-2026-08-30.md`；本审计记录。
+- Verification run: XLSX 全量级别核对、CSV 解析与列数检查、推荐项证据链接检查、
+  Springer 近期论文日期差计算、`git diff --check`。
+- Remaining risk: 期刊时效均是历史统计或近期样本，不是个案承诺；Algorithms 为
+  ESCI 但在学校名单中列为 T4，若学院除名单外还要求 SCIE，需在投稿前书面确认。

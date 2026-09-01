@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 论文类型：SCI 期刊投稿（Neurocomputing / Pattern Recognition / TNNLS 一档）
+- 论文类型：SCI 期刊投稿；当前目标为 Computers & Graphics（T4，Elsevier）
 - 学科领域：计算机视觉 / 图像超分辨率 / 轻量级网络
 - 工作代号：DPRNet（基于 CATANet，将 TAB 路由替换为 Dynamic Prototype Routing）
 - 暂定题目：Dynamic Prototype Routing for Lightweight Image Super-Resolution
@@ -12,7 +12,8 @@
   撰写正文；确定具体期刊后再迁移到对应期刊模板（Neurocomputing/PR → Elsevier
   elsarticle；TNNLS → IEEEtran）。注意：CVPR 为会议双栏模板，最终投期刊需换格式。
 - 语言：英文
-- 当前阶段：x2 模型训练完成，进入 x3/x4 训练 + 论文撰写并行阶段
+- 当前阶段：实验和正文已完成；Neurocomputing 已 desk reject，MVAP 已于
+  2026-09-01 主动撤稿，正在准备 Computers & Graphics 双匿名投稿包
 
 ## 研究信息
 
