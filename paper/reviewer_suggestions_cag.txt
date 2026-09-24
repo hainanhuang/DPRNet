@@ -1,0 +1,81 @@
+Computers & Graphics - Suggested Reviewer Reference
+===================================================
+
+Manuscript:
+Dynamic Prototype Routing for Lightweight Image Super-Resolution
+
+Purpose:
+Use this file to enter reviewer information in Editorial Manager. Do not upload
+it as a manuscript attachment unless the portal explicitly requests a reviewer
+suggestion file.
+
+Recommended reviewer 1
+----------------------
+Given name: Radu
+Family name: Timofte
+Affiliation: Chair for Computer Vision, Institute of Computer Science and
+CAIDAS, University of Wurzburg, Germany
+Institutional email: radu.timofte@uni-wuerzburg.de
+Reason: Professor Timofte has extensive expertise in image super-resolution,
+image restoration, and efficient visual-computing models. This expertise is
+directly relevant to evaluating the proposed lightweight routing mechanism,
+benchmark protocol, and restoration-quality evidence.
+Official sources:
+https://www.informatik.uni-wuerzburg.de/en/computervision/team/
+https://www.uni-wuerzburg.de/en/news-and-events/news/detail/news/humboldt-professur-fuer-die-informatik/
+
+Recommended reviewer 2
+----------------------
+Given name: Kyoung Mu
+Family name: Lee
+Affiliation: Department of Electrical and Computer Engineering, Seoul National
+University, Republic of Korea
+Institutional email: kyoungmu@snu.ac.kr
+Reason: Professor Lee's work includes the VDSR and EDSR super-resolution
+architectures and broader low-level vision research. He is well qualified to
+assess reconstruction quality, architectural design, and fair comparison with
+lightweight super-resolution baselines.
+Official sources:
+https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p061
+https://cv.snu.ac.kr/index.php/kmlee/
+
+Backup reviewer 1
+-----------------
+Given name: Yapeng
+Family name: Tian
+Affiliation: Department of Computer Science, The University of Texas at Dallas,
+United States
+Institutional email: yapeng.tian@utdallas.edu
+Reason: Professor Tian has published on video super-resolution, efficient
+structured-sparsity learning, and image-restoration models. His background is
+relevant to the paper's efficiency, routing, and restoration evaluations.
+Official sources:
+https://cs.utdallas.edu/people/faculty/tian-yapeng/
+https://profiles.utdallas.edu/index.php/yapeng.tian
+
+Backup reviewer 2
+-----------------
+Given name: Pier Luigi
+Family name: Dragotti
+Affiliation: Department of Electrical and Electronic Engineering, Imperial
+College London, United Kingdom
+Institutional email: p.dragotti@imperial.ac.uk
+Reason: Professor Dragotti works on image reconstruction, image restoration,
+model-based deep learning, and image super-resolution. This expertise is
+relevant to assessing the method's reconstruction rationale and experimental
+evidence.
+Official source:
+https://www.commsp.ee.ic.ac.uk/~pld/
+
+Conflict and diversity check
+----------------------------
+The authors reported no known reviewer exclusions or conflicts on September 23,
+2026. None of the candidates is affiliated with China University of Geosciences
+(Wuhan). The four candidates are located in Germany, the Republic of Korea, the
+United States, and the United Kingdom, respectively. Before final submission,
+the authors should still confirm that neither author has co-authored or
+collaborated with any candidate during the last three years and that no other
+personal or professional competing interest exists.
+
+Journal policy source:
+https://www.elsevier.com/journals/computers-and-graphics/0097-8493/guide-for-authors

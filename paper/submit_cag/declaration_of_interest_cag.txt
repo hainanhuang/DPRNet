@@ -1,0 +1,18 @@
+Declaration of Interest Statement
+
+Manuscript: Dynamic Prototype Routing for Lightweight Image Super-Resolution
+
+[X] The authors declare that they have no known competing financial interests
+or personal relationships that could have appeared to influence the work
+reported in this paper.
+
+[ ] The authors declare the following financial interests or personal
+relationships that may be considered potential competing interests:
+
+None.
+
+Authors:
+Hainan Huang
+Xiang Li
+
+Date: September 23, 2026

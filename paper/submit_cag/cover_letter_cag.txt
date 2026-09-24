@@ -1,0 +1,61 @@
+Cover Letter - Computers & Graphics
+
+September 23, 2026
+
+Dear Editor-in-Chief and Editors of Computers & Graphics,
+
+Please consider the manuscript "Dynamic Prototype Routing for Lightweight Image
+Super-Resolution" for publication as a Research Paper in Computers & Graphics.
+
+Single-image super-resolution is a picture-manipulation problem with direct relevance
+to visual computing, display rendering, and resource-constrained image applications.
+The manuscript studies how semantically related image tokens can be grouped and
+processed efficiently rather than enlarging the reconstruction backbone.
+
+The main contribution is Dynamic Prototype Routing, a drop-in replacement for the
+center-based routing in CATANet. It constructs prototypes from the current image,
+separates prototype generation from confirmation with a learnable query bank, retains
+assignment confidence for token ordering, gating, and fallback, and uses a bounded
+temperature with a balancing loss to prevent prototype collapse. The design is
+evaluated on five standard benchmarks at three upscaling factors. Controlled
+three-seed ablations compare the dynamic prototypes directly with a reimplemented
+history-center variant and isolate the routing components.
+
+The closest prior art is:
+
+Xin Liu, Jie Liu, Jie Tang, and Gangshan Wu, "CATANet: Efficient Content-Aware
+Token Aggregation for Lightweight Image Super-Resolution," Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.
+17902-17912, 2025. https://doi.org/10.1109/CVPR52734.2025.01668. Status:
+published.
+
+CATANet maintains routing centers across batches through an exponential moving
+average and uses hard token assignments. The submitted work keeps its backbone and
+external tensor interface fixed but replaces that routing mechanism with per-image
+prototype construction, explicit confidence propagation, decoupled prototype
+confirmation, and anti-collapse regularization. DPRNet does not claim an efficiency
+advantage over CATANet: it incurs a modest cost increase while remaining lighter in
+Multi-Adds than the SwinIR-light and SRFormer-light baselines under the common input
+convention. Its contribution is a more adaptive and interpretable routing mechanism,
+supported by matched multi-seed comparisons and routing diagnostics.
+
+The manuscript is original, has not been published previously, and is not under
+consideration elsewhere. It is not an extended version of a conference paper. All
+authors have approved the manuscript and its submission. The authors declare no
+competing interests. All benchmark images are from publicly available research
+datasets, and no new data were generated.
+
+The reference list begins on page 13, so the scientific content extends only
+slightly beyond the journal's typical 12-page guidance. This small extension is
+needed to retain the three-scale benchmark comparison, controlled multi-seed
+ablations, visual results, and routing diagnostics that substantiate the method.
+
+The manuscript and this cover letter have been anonymized for double-anonymized
+review. Complete author and correspondence information is provided in the separate
+title-page file.
+
+Thank you for your consideration.
+
+Sincerely,
+
+The Authors

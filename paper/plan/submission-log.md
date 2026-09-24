@@ -13,8 +13,8 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | Neurocomputing | T2 | Elsevier | 2026-07-29 | `main_els`（elsarticle 单栏） | ❌ Desk reject → **拒绝转投(ATS Declined)** | 2026-08-01 | 编辑初筛拒稿，转投候选无对口刊，已选 Do not transfer |
 | 2 | **Machine Vision and Applications (MVAP)** | T4 | Springer | **2026-08-02** | `main_springer`（价值锚点重构版） | ↩️ **作者主动撤稿** | **2026-09-01** | 撤稿时页面仍显示 `With editor`；因毕业时限不能接受预期长周期而撤回，非拒稿 |
-| 3 | **Computers & Graphics** | T4 | Elsevier | 待投稿 | `main_els` 待改为 C&G 双匿名投稿版 | 🛠️ **当前目标，准备中** | — | 订阅发表无 APC；历史指标约 78 天实质审稿、105 天投稿到录用 |
-| 4 | The Visual Computer (TVCJ) | T3 | Springer | 计划中（备投） | `main_springer`（同一正文，换 Cover Letter） | ⏳ 备用 | — | 订阅发表无 APC；作为 C&G 未录用后的下一站 |
+| 3 | **Computers & Graphics** | T4 | Elsevier | **2026-09-23** | `main_cag_anonymous`（双栏、行号、双匿名） | ❌ **Desk reject** | **2026-09-23** | 稿号 `CAG-D-26-01076`；未外审，仅因 scope mismatch |
+| 4 | **The Visual Computer (TVCJ)** | T3 | Springer | 待投稿 | `main_springer`（同一正文，换 Cover Letter） | 🛠️ **当前目标** | — | 订阅发表无 APC；官网明列 Image Processing 且有 2026 高效 SR 论文 |
 
 ---
 
@@ -100,20 +100,69 @@
 
 ---
 
-### 目标 #3 — Computers & Graphics（Elsevier，T4）🛠️ 准备中
+### 投稿 #3 — Computers & Graphics（Elsevier，T4）❌ Desk reject
 
 - **选择理由**：学校名单名为 `COMPUTERS & GRAPHICS-UK`，T4；选择订阅发表路线无 APC。已核验的历史指标约为实质审稿 78 天、投稿到录用 105 天，但不保证单篇时长。
 - **投稿入口**：<https://www.editorialmanager.com/CAG>
 - **评审方式**：双匿名。匿名主稿必须删除作者、单位、邮箱、致谢、基金及其他可识别身份的信息；作者信息单独放入 title page。
 - **当前可复用基础**：`main_els.tex`、`preamble_els.tex`、共享的 sections/tables/figures、`highlights_els.txt` 和利益冲突声明。
-- **提交前要完成**：
-  1. 将 `main_els` 从 Neurocomputing 定制版改为 C&G 版本，并生成匿名审稿 PDF；
-  2. 单独制作 title page、C&G cover letter、highlights 和 Declaration of Interest；
-  3. 按实际使用情况准备 generative-AI 写作声明，不能遗漏或虚构；
-  4. 清理 PDF 元数据和文件名中的作者身份，核对匿名正文无单位、邮箱、基金或致谢；
-  5. 在 Editorial Manager 选择 Research paper；若投稿阶段未询问开放方式，则在录用后选择订阅发表；
-  6. 上传前独立编译投稿包，检查引用、图表、页数和匿名性。
+- **正式稿号**：`CAG-D-26-01076`。
+- **投稿日期**：2026-09-23。
+- **结果日期**：2026-09-23。
+- **结果**：Editor-in-Chief 编辑初筛拒稿，未送外审。
+- **拒稿原因**：编辑认为稿件的轻量图像超分主题与 C&G 以交互式计算机图形学、
+  可视化、虚拟环境和 CG 应用为核心的 Editorial Scope 匹配度低。决定信明确说明
+  该决定不反映技术价值或内在质量，而是完全基于 scope and adequacy。
+- **作者元数据**：Hainan Huang（通讯，`huanghainan.7@cug.edu.cn`）；
+  Xiang Li（`lixiang@cug.edu.cn`）。共同单位为 School of Computer Science,
+  China University of Geosciences (Wuhan), Future City Campus,
+  No. 68 Jincheng Street, East Lake High-tech Development Zone, Wuhan,
+  Hubei 430078, China。
+- **投稿包状态（2026-09-23）**：`paper/submit_cag/` 已重新生成，包含匿名主稿、
+  title page、匿名 cover letter、highlights、Declaration of Interest、生成式 AI
+  声明、审稿人字段参考和上传说明；cover letter 与利益声明日期均为
+  September 23, 2026。
+- **推荐审稿人**：优先 Radu Timofte（德国）和 Kyoung Mu Lee（韩国）；
+  备选 Yapeng Tian（美国）和 Pier Luigi Dragotti（英国）。机构邮箱、推荐理由
+  与官方来源见 `paper/reviewer_suggestions_cag.txt`。作者报告无已知排除或
+  利益冲突，并按期刊规则确认近三年内无合作关系。
+- **排版与验证**：匿名主稿为双栏 16 页，带行号，References 从第 13 页开始；
+  cover letter 已解释略超通常 12 页建议的原因。编译无 error、未定义引用或
+  Overfull box，PDF 正文与 metadata 未检出作者身份。
+- **提交文件类型**：Anonymised Cover Letter、Declaration of competing interests、
+  Manuscript without author details、Highlights、Title page with author details。
+- **审批 PDF**：`paper/submit_cag/CAG-S-26-01680.pdf`，21 页；逐页核验内容完整，
+  匿名主稿未检出作者身份。该文件名不是正式稿号。
+- **转投邮件**：Elsevier Transfer Your Manuscript Service 已发送候选刊推荐；未核验
+  学校名单、方向和周期前不接受 transfer，无合适候选时选择 `Decline all`。
+- **下一步**：改投 The Visual Computer；不申诉、不向 C&G 重投。
 - **官方要求**：<https://www.elsevier.com/journals/computers-and-graphics/0097-8493/guide-for-authors>
+
+---
+
+### 目标 #4 — The Visual Computer（Springer，T3）🛠️ 当前目标
+
+- **选择理由**：官网 scope 明确包含 `Image Processing`，并将 visual computing
+  定义为 graphics、computer vision 与 AI 的交叉；2026 年已刊发高效图像超分论文，
+  比 C&G 的范围匹配证据更直接。
+- **费用**：Hybrid；录用后选择 subscription publishing，无 APC。
+- **现有基础**：`paper/main_springer.tex`、`paper/cover_letter_tvcj.txt` 和
+  `paper/submit_springer/` 可复用。
+- **投稿前更新**：
+  1. Cover letter 日期改为实际投稿日期，并明确引用 TVCJ 的 Image Processing
+     scope 和近期 efficient SR 先例；
+  2. 作者单位更新为 School of Computer Science / Future City Campus，Xiang Li
+     邮箱更新为 `lixiang@cug.edu.cn`；
+  3. 按当前指南准备每位作者 50--100 词 biography 和黑白证件照；
+  4. 提交可编辑 Word 或 LaTeX 源文件，并重新执行完整编译与声明核验。
+- **风险边界**：官网的首决定中位数约 3 天包含 desk reject，不代表外审或录用周期；
+  既有近期样本中位数约 77 天也只是小样本历史，不是承诺。
+- **备选顺序**：IJPRAI（T4，US$100 不可退投稿费）→ Algorithms（T4，
+  CHF 1800 APC，付费快线）。
+- **官方页面**：
+  - <https://www.springer.com/journal/371>
+  - <https://www.springer.com/journal/371/submission-guidelines>
+  - <https://www.springer.com/journal/371/how-to-publish-with-us>
 
 ---
 
@@ -128,15 +177,19 @@
 #2 Machine Vision and Applications (T4, Springer, 免费)  ↩️ 2026-09-01 作者主动撤稿
       │  （毕业时限不能接受预期长周期；非拒稿）
       ▼
-#3 Computers & Graphics (T4, Elsevier, 订阅免费)  🛠️ 当前目标，待制作双匿名投稿包
-      │  被拒 → 转下一个
+#3 Computers & Graphics (T4, Elsevier, 订阅免费)  ❌ scope desk reject 2026-09-23
+      │  （未外审；技术质量未被否定）
       ▼
-#4 The Visual Computer (T3, Springer, 订阅免费)
+#4 The Visual Computer (T3, Springer, 订阅免费)  🛠️ 当前目标
       │  被拒 → 转付费快线
       ▼
-保底 Algorithms (T4, MDPI, APC CHF 1800)
+IJPRAI (T4, World Scientific, 投稿费 US$100)
+      │  被拒 → 付费快线
+      ▼
+Algorithms (T4, MDPI, APC CHF 1800)
 ```
 
-- 模板成本：C&G 可复用现有 Elsevier 源文件，但必须拆分匿名主稿和 title page；TVCJ 可复用 `main_springer` 正文。
-- C&G 与 TVCJ 均选择订阅发表路线，无 APC；Algorithms 是接受付费时的快速保底。
+- 模板成本：TVCJ 可复用 `main_springer` 正文，但需刷新作者信息、cover letter、
+  biography 和照片；IJPRAI 需换 World Scientific 格式。
+- TVCJ 选择订阅发表路线，无 APC；Algorithms 是接受付费时的快速保底。
 - 详见推荐表 `DPRNet_投稿推荐.csv`（含各刊级别、费用、周期、可行性和来源链接）。

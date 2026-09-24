@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 论文类型：SCI 期刊投稿；当前目标为 Computers & Graphics（T4，Elsevier）
+- 论文类型：SCI 期刊投稿；当前目标为 The Visual Computer（T3，Springer）
 - 学科领域：计算机视觉 / 图像超分辨率 / 轻量级网络
 - 工作代号：DPRNet（基于 CATANet，将 TAB 路由替换为 Dynamic Prototype Routing）
 - 暂定题目：Dynamic Prototype Routing for Lightweight Image Super-Resolution
@@ -13,7 +13,8 @@
   elsarticle；TNNLS → IEEEtran）。注意：CVPR 为会议双栏模板，最终投期刊需换格式。
 - 语言：英文
 - 当前阶段：实验和正文已完成；Neurocomputing 已 desk reject，MVAP 已于
-  2026-09-01 主动撤稿，正在准备 Computers & Graphics 双匿名投稿包
+  2026-09-01 主动撤稿；Computers & Graphics 于 2026-09-23 因 scope mismatch
+  编辑初筛拒稿、未外审；当前准备转投 The Visual Computer
 
 ## 研究信息
 

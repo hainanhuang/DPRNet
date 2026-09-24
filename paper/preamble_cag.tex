@@ -1,0 +1,74 @@
+%% DPRNet preamble for the Computers & Graphics anonymized review build.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds,shapes.geometric}
+
+%% Computers & Graphics requires line numbers in the double-column review PDF.
+\usepackage[switch]{lineno}
+\setlength\linenumbersep{3pt}
+
+%% Keep the figure-rich paper within the journal's typical page guidance
+%% without changing content or scaling text.
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlist[itemize]{nosep,leftmargin=*}
+\AtBeginDocument{%
+  \setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}%
+  \setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}%
+  \setlength{\belowdisplayshortskip}{3pt plus 1pt minus 1pt}%
+}
+
+%% Reuse shared figure/table files that contain their own single-column float
+%% wrapper while promoting selected items to a proper two-column float.
+\newcommand{\inputcagwidefigure}[1]{%
+  \begin{figure*}[!t]
+    \begingroup
+    \renewenvironment{figure}[1][]{}{}
+    \input{#1}
+    \endgroup
+  \end{figure*}%
+}
+\newcommand{\inputcagwidetable}[1]{%
+  \begin{table*}[!t]
+    \begingroup
+    \renewenvironment{table}[1][]{}{}
+    \input{#1}
+    \endgroup
+  \end{table*}%
+}
+
+%% Shared figure highlighting.
+\providecommand{\dprhl}{}
+\definecolor{dprblue}{rgb}{0.21,0.49,0.74}
+\definecolor{dpramber}{rgb}{0.83,0.55,0.20}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+
+%% Annotation helpers are disabled in submission output.
+\newcommand{\red}[1]{#1}
+\newcommand{\todo}[1]{#1}
+\newcommand{\TODO}[1]{}
+
+%% Keep the review PDF metadata anonymous.
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdfauthor={},
+  pdftitle={Dynamic Prototype Routing for Lightweight Image Super-Resolution},
+  pdfsubject={Anonymous manuscript submitted to Computers and Graphics},
+  pdfkeywords={image super-resolution, lightweight super-resolution,
+    content-aware routing, dynamic prototype routing, self-attention,
+    vision transformer}
+}

@@ -4,9 +4,158 @@
 > 每次有实质进展，请更新「进度日志」与「当前快照」两节。
 
 > 📮 **投稿状态**：稿件已进入投稿阶段，逐次投稿台账见 `paper/plan/submission-log.md`。
-> 最新：**#2 Machine Vision and Applications（MVAP，Springer/T4）已于 2026-09-01 由作者主动撤稿**；
-> 撤稿时平台仍显示 `With editor`，撤稿原因是毕业时限不能接受预期长周期，非编辑拒稿。
-> 当前目标为 **#3 Computers & Graphics（Elsevier/T4，订阅发表无 APC）**，待制作双匿名投稿包。
+> 最新：**#3 Computers & Graphics（Elsevier/T4）已于 2026-09-23 编辑初筛拒稿**；
+> 稿号 `CAG-D-26-01076`，未送外审，决定信明确说明仅因主题与期刊 scope 不匹配，
+> 不评价技术质量。当前下一投为 **#4 The Visual Computer（Springer/T3，订阅无 APC）**。
+
+---
+
+## 2026-09-24 · C&G scope desk reject，下一投改为 The Visual Computer
+
+- **C&G 结果**：稿号 `CAG-D-26-01076` 于 2026-09-23 被 Editor-in-Chief
+  编辑初筛拒稿，未进入同行评审。
+- **拒稿原因**：决定信认定稿件主题与 C&G 以交互式计算机图形学、可视化和图形
+  应用为核心的 Editorial Scope 匹配度低；信中明确说明决定不反映稿件技术价值或
+  内在质量，而是完全基于 scope and adequacy。
+- **处置**：不申诉、不向 C&G 重投。Elsevier Transfer Service 仅作为候选刊查看
+  工具；未核验“学校 T4+ + 图像方向 + 周期可接受”前不接受自动转投。
+- **下一投**：The Visual Computer（T3，Springer，Hybrid）。官网 scope 明确列出
+  `Image Processing`，并将视觉计算定义为 graphics、vision 与 AI 的交叉；2026 年
+  已刊发高效图像超分论文，范围证据显著强于 C&G。
+- **费用与复用**：选择 subscription publishing 无 APC；现有
+  `main_springer.tex`、`cover_letter_tvcj.txt` 和 `submit_springer/` 可复用，但
+  投稿前需刷新日期、作者学院/未来城地址、Xiang Li 邮箱及 50--100 词作者简介和照片。
+- **后续备选**：IJPRAI（T4，范围明确含 Image Processing / Computer Vision，
+  但需支付不可退的 US$100 投稿费）；Algorithms（T4，CHF 1800 APC）仅作为付费快线。
+- **不选 JRTIP**：官网要求完整处理 real-time 的算法、软件、硬件或实现问题，并
+  明确说明仅报告 processing time 不足；当前稿件缺少同硬件基线、FPS 和应用时限分析。
+- **邮箱确认**：正确通讯邮箱为 `huanghainan.7@cug.edu.cn`；C&G 决定信中的
+  `huanghainan2.7@cug.edu.cn` 是此前录入错误。现有稿件、title page 和 cover
+  letter 均已使用正确邮箱，下一投账户信息也必须统一为正确地址。
+- 详细核验：`paper/plan/review/venue-search-audit-2026-09-24.md`。
+
+### Capability-use audit（2026-09-24 C&G rejection and next venue）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, verification.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿结果与转投策略。
+- Inputs consumed: C&G 正式决定信、学校 T4+ 筛选台账、TVCJ/IJPRAI/JRTIP/Algorithms
+  官方 scope、投稿要求与费用页面，以及 TVCJ 2026 年高效 SR 论文目录。
+- Inputs not used and why: 未依据 Elsevier 转投营销邮件直接选刊；候选列表尚未提供，
+  且自动转投不代表范围匹配、名单达标或录用保证。
+- Artifacts produced: 更新投稿状态、投稿漏斗和推荐表；新增
+  `venue-search-audit-2026-09-24.md` 与本任务包。
+- Verification run: 对照决定信核实 desk reject 性质；核验 TVCJ 明列 Image
+  Processing、存在近期 efficient SR 论文且 subscription 无 APC；核验 IJPRAI
+  US$100 不可退投稿费和 JRTIP 的实时性硬门槛；执行 Markdown/CSV 一致性检查。
+- Remaining risk: TVCJ 的首页首决定中位数包含 desk decision，不能视为外审或录用
+  周期承诺；正式提交前仍需按当前指南完成源文件、作者简介和照片要求。
+
+---
+
+## 2026-09-23 · C&G 正式投稿成功
+
+- **目标期刊**：Computers & Graphics（Elsevier，T4）。
+- **稿件标题**：Dynamic Prototype Routing for Lightweight Image Super-Resolution。
+- **正式稿号**：`CAG-D-26-01076`。
+- **投稿日期**：2026-09-23。
+- **系统状态**：`Submitted to Journal`。
+- **投稿系统**：Editorial Manager，<https://www.editorialmanager.com/CAG>。
+- **合成审批 PDF**：`paper/submit_cag/CAG-S-26-01680.pdf`，共 21 页。
+- **提交核验**：系统显示 `Submissions Being Processed for Author`，并列出正式稿号、
+  Initial Date Submitted 和 `Submitted to Journal` 状态，证明投稿已完成，不再是
+  `Incomplete` 或 `Waiting for Approval by Author`。
+- **当时后续动作**：等待技术检查及编辑分配；该状态已由上方 2026-09-24
+  记录的 scope desk reject 结果取代。
+
+### Capability-use audit（2026-09-23 C&G submission completion）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, peer-review, verification.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿完成核验。
+- Inputs consumed: Editorial Manager 的 `Submitted to Journal` 状态截图、正式稿号、
+  投稿日期，以及系统生成的 21 页审批 PDF。
+- Inputs not used and why: 未把审批 PDF 文件名中的 `CAG-S-26-01680` 当作正式稿号；
+  正式稿号以投稿成功页面显示的 `CAG-D-26-01076` 为准。
+- Artifacts produced: 更新 `progress.md`、`project-overview.md`、
+  `submission-log.md` 和 C&G 最终核验报告。
+- Verification run: 核对成功页面的稿号、日期和状态；此前已逐页提取并抽查审批 PDF，
+  确认 21 页附件完整、匿名主稿无作者身份，且文件列表中的 Item Type 映射正确。
+- Remaining risk: 当时仅表示系统成功接收，尚未完成编辑初筛；该风险已于
+  2026-09-23 以 scope desk reject 结果关闭。
+
+---
+
+## 2026-09-23 · C&G 投稿元数据定稿与最终核验
+
+- **阶段**：S5 Review / submission preparation。
+- 按作者确认更新 Xiang Li 邮箱为 `lixiang@cug.edu.cn`；title page 同时列出
+  Hainan Huang 的通讯邮箱。
+- 署名单位明确为 `School of Computer Science, China University of Geosciences
+  (Wuhan)`，通信地址改为 Future City Campus, No. 68 Jincheng Street,
+  East Lake High-tech Development Zone, Wuhan, Hubei 430078, China。
+- Cover letter 和 Declaration of Interest 日期统一改为 September 23, 2026。
+- 新增 `reviewer_suggestions_cag.txt`：优先推荐 Radu Timofte（德国）和
+  Kyoung Mu Lee（韩国），备选 Yapeng Tian（美国）和 Pier Luigi Dragotti
+  （英国）；均提供机构邮箱、推荐理由和官方来源。该文件仅供 Editorial Manager
+  字段录入，不作为附件上传。
+- `paper/submit_cag/` 已重新生成；该阶段的“待提交”状态已在当日完成最终批准后
+  更新为 `Submitted to Journal`，正式稿号为 `CAG-D-26-01076`。
+- 最终核验报告：
+  `paper/plan/review/cag-submission-readiness-2026-09-23.md`。
+
+### Capability-use audit（2026-09-23 C&G metadata finalization）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, peer-review, latex-output, verification, TRAE-browseruse.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿准备与核验。
+- Inputs consumed: 作者确认的两位邮箱、学院/校区信息和计划投稿日期；CUG 官方
+  未来城地址与计算机学院联系方式；C&G reviewer policy；候选人官方机构主页。
+- Inputs not used and why: 同机构的中国学者候选未列入最终四人名单，以满足 C&G
+  对不同国家/地区候选人的多样性要求；未改共享正文、图表、实验或参考文献。
+- Artifacts produced: 更新后的 title page、cover letter、利益声明、DOCX 生成脚本、
+  `reviewer_suggestions_cag.txt`、`submit_cag/`、README、投稿台账和最终核验报告。
+- Verification run: 完整执行 `make_cag_submission_kit.sh`；检查三份 LaTeX 日志；
+  用 Ghostscript 提取 PDF 文本并扫描匿名身份；用 Spotlight 核对页数和 metadata；
+  校验四个 DOCX 的 ZIP/XML；核对 highlights 长度；渲染并目视检查 title page；
+  执行 `git diff --check`。
+- Remaining risk: 当时尚需完成 Editorial Manager 最终批准；该项已于 2026-09-23
+  完成，后续风险转为技术检查和编辑初筛。
+
+---
+
+## 2026-09-01 · C&G 双匿名初投稿包完成
+
+- 新增 `main_cag_anonymous.tex` / `preamble_cag.tex`，按 C&G 要求生成双栏、
+  带行号的匿名审稿 PDF；作者、单位、邮箱、基金、致谢和 CRediT 未进入审稿稿件。
+- 新增独立 title page（PDF + DOCX）、匿名 cover letter（PDF + TXT）、
+  highlights（DOCX + TXT）、Declaration of Interest（DOCX + TXT）和
+  generative-AI declaration（DOCX + TXT）。
+- Cover letter 已按期刊特殊要求加入 CATANet 的完整参考信息、发表状态和 DPR
+  与其路由机制的差异，并解释正文略超通常 12 页建议的必要性。
+- AI 声明置于匿名主稿参考文献之前；按作者要求不列具体工具名称，仅说明使用
+  生成式 AI 进行语言、可读性和稿件组织调整，并明确由作者复核及承担责任。
+- 投稿目录：`paper/submit_cag/`。初投稿目录不含 LaTeX 源文件；文件上传映射见
+  `paper/submit_cag/README.txt`。
+- 截至 2026-09-01 当日仍是“待投稿”；该状态已由 2026-09-23 的正式投稿记录取代。
+
+### Capability-use audit（2026-09-01 C&G submission kit）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, peer-review, latex-output, verification, TRAE-browseruse.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿准备与核验。
+- Inputs consumed: C&G Guide for Authors、Elsevier generative-AI policy、CUG 官方
+  通信地址、现有 `main_els`、共享正文/图表/参考文献、既有 cover letter 与声明。
+- Inputs not used and why: 未生成推荐审稿人名单，因为作者需先核对共同署名、近年合作、
+  同机构和其他利益冲突；未把 LaTeX 源放入初投稿目录，因为 C&G 明确要求初投只交 PDF。
+- Artifacts produced: `main_cag_anonymous.*`、`title_page_cag.*`、
+  `cover_letter_cag.*`、`highlights_cag.*`、两类声明、构建脚本、
+  `submit_cag/` 和 `plan/review/cag-submission-readiness-2026-09-01.md`。
+- Verification run: 清理后完整 LaTeX/BibTeX 重编译；PDF 文本与 metadata 匿名扫描；
+  引用 key 对照；页数和 References 起始页检查；highlights 字符数检查；DOCX ZIP/XML
+  完整性检查；16 页逐页渲染与图表版面目视检查；`git diff --check`。
+- Remaining risk: 2026-09-01 时 title page 仍采用南望山校区地址且未生成推荐
+  审稿人；两项均已在 2026-09-23 投稿前完成修正和核验。
 
 ---
 

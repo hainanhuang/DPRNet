@@ -1,0 +1,83 @@
+% =====================================================================
+% DPRNet -- Computers & Graphics initial-submission review manuscript.
+%
+% Journal requirements applied here:
+%   - double-column layout;
+%   - continuous line numbers;
+%   - double-anonymized review;
+%   - no author, affiliation, email, acknowledgement, funding, or CRediT
+%     information in the review PDF;
+%   - generative-AI declaration immediately before the references.
+%
+% Initial submission: upload the compiled PDF only. Do not upload this
+% source file unless the journal requests source files after revision.
+% =====================================================================
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\input{preamble_cag}
+
+\journal{Computers \& Graphics}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Dynamic Prototype Routing for Lightweight Image Super-Resolution}
+
+\input{sections/0_abstract}
+
+\begin{keyword}
+image super-resolution \sep lightweight super-resolution \sep content-aware routing \sep
+dynamic prototype routing \sep self-attention \sep vision transformer
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\input{sections/1_introduction}
+\input{sections/2_method}
+\inputcagwidefigure{figures/fig1_architecture}
+\inputcagwidefigure{figures/fig2_dpr}
+
+\input{sections/3_experiments_setup}
+\input{sections/3_experiments_comparison}
+\inputcagwidetable{tables/table1_main_comparison}
+\input{tables/table2_efficiency}
+
+\input{sections/3_experiments_efficiency}
+\input{figures/fig3_psnr_params}
+
+\input{sections/3_experiments_visual}
+\inputcagwidefigure{figures/fig7_visual}
+
+\input{sections/3_experiments_ablation}
+\input{tables/table_c1_dpr_vs_ema}
+\input{tables/table3_ablation_a1}
+\input{tables/table4_ablation_a2}
+\input{tables/table5_ablation_a3}
+
+\input{sections/3_experiments_routing_analysis}
+\input{figures/fig5_xscore_hist}
+\input{figures/fig6_usage_entropy}
+\inputcagwidefigure{figures/fig8_cluster_maps}
+
+\input{sections/4_discussion}
+\input{sections/5_conclusion}
+
+\section*{Data availability}
+The datasets used in this study are all publicly available: the DIV2K training set and
+the Set5, Set14, BSD100, Urban100, and Manga109 benchmarks. No new data were generated.
+The code and trained models are not publicly available due to institutional restrictions.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the
+manuscript preparation process}
+During the preparation of this work, the authors used generative AI-assisted technologies
+to improve the language and readability of the manuscript and to assist with its
+organization. After using these technologies, the authors reviewed and edited the content
+as needed and take full responsibility for the content of the article.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,7 @@
+Highlights
+
+- Dynamic prototypes replace history-dependent centers for token routing
+- Per-image token grouping adapts directly to current visual content
+- Assignment confidence guides token ordering, gating, and soft fallback
+- A balancing loss yields more even and stable prototype usage across seeds
+- The model remains lightweight across five super-resolution benchmarks
