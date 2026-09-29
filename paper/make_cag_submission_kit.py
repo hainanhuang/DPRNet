@@ -172,7 +172,11 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path(__file__).resolve().parent / "submit_cag",
+        default=(
+            Path(__file__).resolve().parent
+            / "submissions"
+            / "03_computers_and_graphics_2026-09-23"
+        ),
     )
     args = parser.parse_args()
     build_files(args.output.resolve())

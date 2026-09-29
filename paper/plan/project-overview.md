@@ -14,7 +14,8 @@
 - 语言：英文
 - 当前阶段：实验和正文已完成；Neurocomputing 已 desk reject，MVAP 已于
   2026-09-01 主动撤稿；Computers & Graphics 于 2026-09-23 因 scope mismatch
-  编辑初筛拒稿、未外审；当前准备转投 The Visual Computer
+  编辑初筛拒稿、未外审；The Visual Computer 已于 2026-09-29 正式投稿，
+  当前处于 Technical Check
 
 ## 研究信息
 

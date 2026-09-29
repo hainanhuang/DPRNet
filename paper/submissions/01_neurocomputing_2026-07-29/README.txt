@@ -4,6 +4,11 @@
  作者: Hainan Huang (通讯), Xiang Li
 ========================================================================
 
+归档状态：
+  2026-07-29 投稿，稿号 NEUCOM-D-26-16600。
+  2026-08-01 编辑初筛拒稿，未送外审；已拒绝 Article Transfer Service 转投。
+  本目录保留该次投稿的全部本地材料，不应直接用于新的期刊投稿。
+
 你界面上的 "Upload your required files" 有三项：
   • Abstract                         -> 需上传
   • Manuscript                       -> 需上传
@@ -16,7 +21,7 @@
 ------------------------------------------------------------------------
 1) 文件类型选 "Abstract"
    上传:  abstract.docx
-   (只含摘要的独立文件，207 词，<250 限制)
+   (只含摘要的独立文件，246 词，<250 限制)
 
 2) 文件类型选 "Manuscript"
    二选一：
@@ -38,6 +43,16 @@
 5) Declaration of competing interests：
    你已在界面勾选 "no competing interests" 确认，declaration_of_competing_interest.docx
    本界面用不到；仅当界面要求上传文件时才用它。
+
+------------------------------------------------------------------------
+源码分发归档
+------------------------------------------------------------------------
+distribution/DPRNet_Neurocomputing_submission/
+   2026-07-28 生成的完整可编译源码目录。
+
+distribution/DPRNet_Neurocomputing_submission.zip
+   上述完整源码目录的 ZIP 归档；与初投界面中的精简
+   manuscript_latex_source.zip 分开保留。
 
 ------------------------------------------------------------------------
 提交前再确认（只有你能定）

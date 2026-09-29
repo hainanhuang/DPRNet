@@ -1,0 +1,21 @@
+AUTHOR BIOGRAPHIES
+==================
+
+Hainan Huang
+-------------
+Hainan Huang is affiliated with the School of Computer Science, China
+University of Geosciences (Wuhan), China. His work focuses on computer vision
+and image super-resolution, with particular interest in lightweight neural
+networks, efficient visual computing, and content-aware routing. He developed
+the Dynamic Prototype Routing method and conducted the implementation,
+experiments, analysis, and visualization reported in this study.
+
+Xiang Li
+--------
+Xiang Li is affiliated with the School of Computer Science, China University
+of Geosciences (Wuhan), China. In this study, he contributed to
+conceptualization, supervision, resource provision, project administration,
+and review of the manuscript. His work on the project focused on developing
+and evaluating confidence-aware routing for lightweight image
+super-resolution and positioning the method within computer vision and image
+processing.

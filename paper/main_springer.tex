@@ -1,18 +1,16 @@
 % =====================================================================
-% DPRNet -- Springer SUBMISSION build (shared for Machine Vision and
-% Applications [MVAP] and The Visual Computer [TVCJ]).
+% DPRNet -- Springer SUBMISSION build for The Visual Computer (TVCJ).
 % Created 2026-08-01.
+% Updated for TVCJ first submission on 2026-09-29.
 %
 % WHY a standard article class instead of sn-jnl.cls:
 %   The Springer Nature class file (sn-jnl.cls) is distributed only via
 %   Springer's own site / Overleaf and is NOT on CTAN; it could not be
 %   fetched in this environment. Per the official author guidelines
 %   (verified 2026-08-01):
-%     - MVAP accepts LaTeX OR Word source and does NOT force the exact
-%       template layout; it only requires *editable source* + a compiled
-%       PDF at first submission.
-%     - The Visual Computer follows Springer's standard first-submission
-%       policy (editable source; formatting finalized after acceptance).
+%     - The Visual Computer accepts editable LaTeX source and has no
+%       journal-specific official template at first submission.
+%     - Complete editable source files are required at every submission.
 %   A single-column 12pt article source therefore satisfies "editable
 %   source" for first submission. If the paper reaches revision/acceptance,
 %   re-typeset into sn-jnl.cls ([iicol]) then.
@@ -20,8 +18,6 @@
 % Reuses the SAME shared sources as the CVPR (main.tex), MDPI
 % (main_mdpi.tex), and Elsevier (main_els.tex) builds:
 %   sections/*  tables/*  figures/*  references.bib
-%
-% Target journal: switch \dprjournal below when uploading.
 %
 % Compile:
 %   pdflatex main_springer ; bibtex main_springer ; pdflatex main_springer ; pdflatex main_springer
@@ -39,18 +35,27 @@
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{setspace}
 \onehalfspacing
+\setlength{\emergencystretch}{3em}
 \usepackage[numbers,sort&compress]{natbib}   % Springer Nature Basic style is numeric
 \bibliographystyle{unsrtnat}                  % numeric, cited-order (Springer-compatible;
                                               % sn-jnl.cls not on CTAN in this env)
 
 \input{preamble_els}   % shared extra packages for figures/tables (amsmath, booktabs, multirow, float, pifont, pgfplots, tikz, dprblue/dpramber, \TODO ...)
+\hypersetup{
+  pdfauthor={Hainan Huang and Xiang Li},
+  pdftitle={Dynamic Prototype Routing for Lightweight Image Super-Resolution}
+}
 
 \title{\bfseries Dynamic Prototype Routing for Lightweight Image Super-Resolution}
 
 \author{
-  Hainan Huang\thanks{Corresponding author: \texttt{huanghainan.7@cug.edu.cn}} \and
-  Xiang Li \\[2pt]
-  \normalsize China University of Geosciences (Wuhan), Wuhan, China
+  Hainan Huang\textsuperscript{*} and Xiang Li\\[4pt]
+  \normalsize School of Computer Science\\
+  \normalsize China University of Geosciences (Wuhan)\\
+  \normalsize Future City Campus, No.\ 68 Jincheng Street\\
+  \normalsize East Lake High-tech Development Zone, Wuhan, Hubei 430078, China\\[3pt]
+  \small \textsuperscript{*}Corresponding author:
+  \texttt{huanghainan.7@cug.edu.cn}; Xiang Li: \texttt{lixiang@cug.edu.cn}
 }
 
 \date{}
@@ -116,13 +121,17 @@ prototype routing \textperiodcentered\ vision transformer \textperiodcentered\ s
 \input{sections/5_conclusion}
 
 %%%%%%%%% BACK MATTER (Springer style: declarations after conclusion)
-\section*{Declarations}
+\section*{Statements and Declarations}
 
 \paragraph{Author contributions.}
 Hainan Huang: conceptualization, methodology, software, validation, formal analysis,
 investigation, data curation, writing -- original draft, visualization. Xiang Li:
 conceptualization, supervision, funding acquisition, resources, writing -- review \&
-editing, project administration.
+editing, project administration. All authors have read and approved the submitted
+version of the manuscript.
+
+\paragraph{Funding.}
+This research received no external funding.
 
 \paragraph{Competing interests.}
 The authors declare that they have no competing interests.
@@ -131,6 +140,11 @@ The authors declare that they have no competing interests.
 The datasets used in this study are all publicly available: the DIV2K training set and the
 Set5, Set14, BSD100, Urban100, and Manga109 benchmarks. No new data were generated. The code
 and trained models are not publicly available due to institutional restrictions.
+
+\paragraph{Use of generative AI.}
+During manuscript preparation, generative AI tools were used to polish language, improve
+readability, and assist in organizing the manuscript structure. The authors reviewed and
+edited all resulting text and take full responsibility for the content of the publication.
 
 %%%%%%%%% REFERENCES
 \bibliography{references}

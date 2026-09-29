@@ -1,0 +1,169 @@
+#!/usr/bin/env bash
+# Build a dedicated first-submission package for The Visual Computer.
+set -euo pipefail
+
+SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+OUT="$SRC/submissions/04_the_visual_computer_2026-09-29"
+SOURCE_DIR="$OUT/_source"
+SOURCE_ZIP="$OUT/manuscript_latex_source.zip"
+
+check_log() {
+  local log_file="$1"
+
+  if grep -qiE "LaTeX Error|Emergency stop|Fatal error" "$log_file"; then
+    echo "ERROR: LaTeX failure in $log_file"
+    exit 1
+  fi
+  if grep -qiE "undefined (citation|reference)|There were undefined references" "$log_file"; then
+    echo "ERROR: undefined citation or reference in $log_file"
+    exit 1
+  fi
+  if grep -Fq 'Overfull \hbox' "$log_file"; then
+    echo "ERROR: overfull box in $log_file"
+    exit 1
+  fi
+}
+
+echo "==> Rebuilding manuscript and cover letter"
+pushd "$SRC" >/dev/null
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >tvcj_main_build1.log
+bibtex main_springer >tvcj_main_bibtex.log
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >tvcj_main_build2.log
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >tvcj_main_build3.log
+pdflatex -interaction=nonstopmode -halt-on-error cover_letter_tvcj.tex >tvcj_cover_build1.log
+pdflatex -interaction=nonstopmode -halt-on-error cover_letter_tvcj.tex >tvcj_cover_build2.log
+check_log main_springer.log
+check_log cover_letter_tvcj.log
+popd >/dev/null
+
+echo "==> Assembling editable source"
+mkdir -p "$OUT"
+rm -rf "$SOURCE_DIR"
+rm -f "$SOURCE_ZIP" "$OUT/manuscript_tvcj.pdf" \
+  "$OUT/cover_letter_tvcj.pdf" "$OUT/cover_letter_tvcj.txt" \
+  "$OUT/author_biographies_tvcj.txt" "$OUT/submission_metadata_tvcj.txt"
+mkdir -p "$SOURCE_DIR/sections" "$SOURCE_DIR/tables" "$SOURCE_DIR/figures"
+cp "$SRC/main_springer.tex" "$SOURCE_DIR/"
+cp "$SRC/preamble_els.tex" "$SRC/references.bib" "$SOURCE_DIR/"
+cp "$SRC/main_springer.bbl" "$SOURCE_DIR/"
+cp "$SRC"/sections/*.tex "$SOURCE_DIR/sections/"
+cp "$SRC"/tables/*.tex "$SOURCE_DIR/tables/"
+cp "$SRC"/figures/*.tex "$SOURCE_DIR/figures/"
+cp -R "$SRC/figures/fig7_assets" "$SOURCE_DIR/figures/fig7_assets"
+cp -R "$SRC/figures/fig58_assets" "$SOURCE_DIR/figures/fig58_assets"
+
+echo "==> Test-compiling editable source from scratch"
+pushd "$SOURCE_DIR" >/dev/null
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >build1.log
+bibtex main_springer >bibtex.log
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >build2.log
+pdflatex -interaction=nonstopmode -halt-on-error main_springer.tex >build3.log
+check_log main_springer.log
+SOURCE_PAGES="$(grep -oE 'Output written on .+\([0-9]+ pages?' build3.log | grep -oE '[0-9]+ pages?' | tail -1)"
+echo "==> Editable source compiles: $SOURCE_PAGES"
+rm -f build1.log build2.log build3.log bibtex.log main_springer.aux \
+  main_springer.blg main_springer.log main_springer.out \
+  main_springer.pdf main_springer.brf main_springer.fdb_latexmk \
+  main_springer.fls main_springer.toc
+popd >/dev/null
+
+echo "==> Creating source archive"
+(cd "$SOURCE_DIR" && zip -rq "$SOURCE_ZIP" .)
+rm -rf "$SOURCE_DIR"
+
+echo "==> Copying submission files"
+cp "$SRC/main_springer.pdf" "$OUT/manuscript_tvcj.pdf"
+cp "$SRC/cover_letter_tvcj.pdf" "$OUT/"
+cp "$SRC/cover_letter_tvcj.txt" "$OUT/"
+cp "$SRC/author_biographies_tvcj.txt" "$OUT/"
+cp "$SRC/submission_metadata_tvcj.txt" "$OUT/"
+
+mkdir -p "$OUT/author_photos"
+cat >"$OUT/author_photos/README.txt" <<'EOF'
+AUTHOR ACTION REQUIRED
+======================
+
+The Visual Computer asks for a black-and-white, passport-sized photograph for
+each author. The initial submission form did not expose a photograph field.
+Add real author-approved photographs here if requested during technical check
+or revision:
+
+  Hainan_Huang_photo_bw.jpg
+  Xiang_Li_photo_bw.jpg
+
+Do not upload this instruction file. No photograph was synthesized or copied
+from an unverified source.
+EOF
+
+cat >"$OUT/README.txt" <<'EOF'
+DPRNet - The Visual Computer first-submission package
+=====================================================
+
+Target journal: The Visual Computer (Springer)
+Article type: Research
+Peer review: single-blind; keep author information in the manuscript
+Publishing route after acceptance: subscription (no APC)
+Submitted: September 29, 2026
+Status: Technical Check in progress
+Submission ID: b1c6e861-7da7-4e0d-bd7d-78c1af65f32a
+Submission version: v.1.0
+
+Upload at first submission
+--------------------------
+1. manuscript_latex_source.zip
+   Complete editable source. The journal requires editable source files at
+   every submission and revision.
+2. manuscript_tvcj.pdf
+   Compiled manuscript with figures and author information.
+3. cover_letter_tvcj.pdf
+   Cover letter dated September 29, 2026.
+4. Author biographies
+   Copy from author_biographies_tvcj.txt or upload it if the system provides
+   a biography file type.
+5. Author photographs
+   Supply one real black-and-white passport-sized photograph per author.
+
+Local review record
+-------------------
+- springer_generated_review.pdf is the PDF generated by the Springer
+  submission system after a successful LaTeX conversion.
+- Keep this file for review and audit; do not upload it back to the system.
+
+Copyable submission fields
+--------------------------
+- submission_metadata_tvcj.txt contains the title, abstract, keywords,
+  authors, affiliation, declarations, and reviewer-expertise text.
+- cover_letter_tvcj.txt is the plain-text version of the PDF letter.
+
+Submission record and follow-up
+-------------------------------
+- The final submission was confirmed by the corresponding author.
+- The system account identifies Hainan Huang with ORCID
+  0009-0002-6971-4311.
+- The submission system did not expose an author-biography or photograph
+  upload field during initial submission. Keep the prepared biographies and
+  add photographs if requested during technical check or revision.
+- Keep the subscription publishing option when it is offered after acceptance.
+
+Archive
+-------
+- archive/2026-08-01-cover-letter-draft/ contains the preliminary TVCJ cover
+  letter that was previously mixed into the historical MVAP package.
+- Do not upload files from archive/.
+
+Do not upload README.txt or author_photos/README.txt.
+EOF
+
+echo "==> Validating source archive"
+unzip -t "$SOURCE_ZIP" >/dev/null
+
+rm -f "$SRC"/cover_letter_tvcj.aux "$SRC"/cover_letter_tvcj.log \
+  "$SRC"/cover_letter_tvcj.out "$SRC"/main_springer.aux \
+  "$SRC"/main_springer.blg "$SRC"/main_springer.log \
+  "$SRC"/main_springer.out "$SRC"/tvcj_cover_build1.log \
+  "$SRC"/tvcj_cover_build2.log "$SRC"/tvcj_main_bibtex.log \
+  "$SRC"/tvcj_main_build1.log "$SRC"/tvcj_main_build2.log \
+  "$SRC"/tvcj_main_build3.log
+
+echo "==> TVCJ package created at $OUT"
+find "$OUT" -maxdepth 2 -type f -print | sort

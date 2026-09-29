@@ -1,0 +1,95 @@
+THE VISUAL COMPUTER - SUBMISSION METADATA
+=========================================
+
+Article type
+------------
+Research
+
+Title
+-----
+Dynamic Prototype Routing for Lightweight Image Super-Resolution
+
+Authors
+-------
+1. Hainan Huang
+   Corresponding author: Yes
+   Email: huanghainan.7@cug.edu.cn
+   ORCID: 0009-0002-6971-4311
+
+2. Xiang Li
+   Corresponding author: No
+   Email: lixiang@cug.edu.cn
+
+Affiliation
+-----------
+School of Computer Science, China University of Geosciences (Wuhan),
+Future City Campus, No. 68 Jincheng Street, East Lake High-tech Development
+Zone, Wuhan, Hubei 430078, China
+
+Abstract
+--------
+Lightweight single image super-resolution (SR) must balance reconstruction
+quality with model cost on resource-constrained platforms. Content-aware
+routing improves this balance by grouping semantically related tokens, yet
+the widely used center-based router--the Token Aggregation Block (TAB) of
+CATANet--relies on cross-batch exponential-moving-average centers, hard
+assignment labels, and a coupled prototype update/confirmation step, tying
+routing to a drifting historical state and discarding assignment confidence.
+We revisit token routing itself and propose Dynamic Prototype Routing (DPR), a
+confidence-aware, drop-in replacement for the TAB routing that keeps the
+CATANet backbone and tensor interface unchanged. DPR builds per-image
+prototypes directly from the current tokens, decouples prototype generation
+from confirmation through a learnable query bank, matches tokens with a
+bounded learnable temperature, and carries the resulting assignment
+confidence into token ordering, global gating, and a soft fallback, with a
+usage-balancing regularizer that discourages prototype-slot collapse. Trained
+on DIV2K and evaluated on five standard benchmarks at x2/x3/x4, DPRNet matches
+CATANet-level accuracy with small gains on most benchmark cells while staying
+in the lightweight regime; at x4, for example, it obtains 26.89 dB on Urban100
+with 52.14 G Multi-Adds, fewer than the lightweight Transformer baselines
+SwinIR-light and SRFormer-light under the same input convention. Three-seed
+ablations isolate each design choice: the dynamic prototypes outperform a
+history-center EMA variant under an identical protocol, and the balancing
+loss makes prototype usage more balanced and more stable across seeds. DPR
+thus offers a reusable, interpretable alternative to center-based token
+routing rather than a larger backbone.
+
+Keywords
+--------
+image super-resolution; lightweight super-resolution; content-aware routing;
+dynamic prototype routing; vision transformer; self-attention
+
+Author contributions
+--------------------
+Hainan Huang: conceptualization, methodology, software, validation, formal
+analysis, investigation, data curation, writing - original draft,
+visualization. Xiang Li: conceptualization, supervision, funding acquisition,
+resources, writing - review and editing, project administration. All authors
+have read and approved the submitted version of the manuscript.
+
+Funding
+-------
+This research received no external funding.
+
+Competing interests
+-------------------
+The authors declare that they have no competing interests.
+
+Data availability
+-----------------
+The datasets used in this study are all publicly available: the DIV2K training
+set and the Set5, Set14, BSD100, Urban100, and Manga109 benchmarks. No new data
+were generated. The code and trained models are not publicly available due to
+institutional restrictions.
+
+Use of generative AI
+--------------------
+During manuscript preparation, generative AI tools were used to polish
+language, improve readability, and assist in organizing the manuscript
+structure. The authors reviewed and edited all resulting text and take full
+responsibility for the content of the publication.
+
+Suggested reviewer expertise
+----------------------------
+Lightweight and efficient image super-resolution; vision Transformers for
+image restoration; content-aware token routing and clustering.

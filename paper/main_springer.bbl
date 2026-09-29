@@ -188,7 +188,7 @@ Jeongsoo Kim, Jongho Nang, and Junsuk Choe.
 \bibitem[Wu et~al.(2024)Wu, Li, Hu, and Huang]{wu2024compacter}
 Zhijian Wu, Jun Li, Yang Hu, and Dingjiang Huang.
 \newblock {Compacter}: A lightweight transformer for image restoration.
-\newblock In \emph{32nd ACM International Conference on Multimedia (ACM MM)}, 2024.
+\newblock In \emph{32nd ACM International Conference on Multimedia (ACM MM)}, pages 3094--3103, 2024.
 \newblock \doi{10.1145/3664647.3680811}.
 
 \bibitem[Zhang et~al.(2024)Zhang, Li, Zhou, Zhao, and Gu]{zhang2024atd}
@@ -296,7 +296,7 @@ Xiao He, Huaao Tang, Zhijun Tu, Junchao Zhang, Kun Cheng, Hanting Chen, Yong Guo
 \bibitem[Zheng et~al.(2026)Zheng, Zhang, Zhu, Liu, Hu, Li, and Yang]{zheng2026dvar}
 Yu~Zheng, Kai Zhang, Wei Zhu, Qingguo Liu, Xiantao Hu, Jun Li, and Jian Yang.
 \newblock {DVAR}: Dynamic visual autoregressive modeling for image super-resolution.
-\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2026.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 23378--23387, 2026.
 \newblock DVAR.
 
 \end{thebibliography}

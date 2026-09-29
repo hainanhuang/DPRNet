@@ -1,0 +1,35 @@
+## Task Packet
+
+- Stage: S5 submission execution and verification.
+- Scope: Complete the first submission to The Visual Computer, verify the
+  Springer-generated review PDF, and record the official submission state.
+- Files to read:
+  - `paper/submissions/04_the_visual_computer_2026-09-29/README.txt`
+  - `paper/submissions/04_the_visual_computer_2026-09-29/submission_metadata_tvcj.txt`
+  - `paper/plan/submission-log.md`
+  - `paper/plan/progress.md`
+- Files allowed to edit:
+  - `paper/submissions/04_the_visual_computer_2026-09-29/**`
+  - `paper/make_tvcj_submission_kit.sh`
+  - `paper/plan/project-overview.md`
+  - `paper/plan/progress.md`
+  - `paper/plan/submission-log.md`
+  - `paper/plan/task-packets/2026-09-29-tvcj-submission-kit.md`
+- Required skills:
+  - research-writing-assistant
+  - using-research-writing
+  - TRAE-browseruse
+  - verification
+- Required artifacts:
+  - Completed Springer submission record.
+  - Server-generated review PDF archived locally.
+  - Updated local package name, README, metadata, and submission log.
+- Rejection checks:
+  - Do not click the final submit button without user confirmation.
+  - Do not opt into public preprint posting without explicit author approval.
+  - Do not record the UUID submission ID as a journal manuscript number.
+  - Do not claim peer review has started while status is Technical Check.
+- Validation:
+  - Confirm the Springer success page and tracking status.
+  - Verify server-generated PDF page count and text against the local PDF.
+  - Verify final package paths, ZIP integrity, and document consistency.

@@ -8,7 +8,8 @@
 
 ## 结论
 
-C&G 初投稿包已生成在 `paper/submit_cag/`。匿名主稿、title page、cover
+C&G 初投稿包已生成在
+`paper/submissions/03_computers_and_graphics_2026-09-23/`。匿名主稿、title page、cover
 letter、highlights、利益声明和生成式 AI 声明均已生成并完成格式检查。当前状态为
 “文件就绪，尚未在 Editorial Manager 提交”。
 
@@ -20,7 +21,7 @@ letter、highlights、利益声明和生成式 AI 声明均已生成并完成格
 | 行号 | `main_cag_anonymous.pdf` | 通过 |
 | 双匿名 | 匿名主稿与匿名 cover letter | 通过 |
 | 作者信息单列 | `title_page_cag.pdf` / `.docx` | 通过 |
-| 初投仅上传主稿 PDF，不上传 LaTeX 源 | `submit_cag/` 不含 `.tex/.bib/.zip` | 通过 |
+| 初投仅上传主稿 PDF，不上传 LaTeX 源 | C&G 投稿目录不含 `.tex/.bib/.zip` | 通过 |
 | 最多 6 个关键词 | 匿名主稿含 6 个关键词 | 通过 |
 | 3--5 条 highlights，每条不超过 85 字符 | `highlights_cag.docx`，5 条，长度 66--73 | 通过 |
 | Competing-interest statement | title page + 独立 DOCX | 通过 |

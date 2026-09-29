@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-OUT="$SRC/submit_cag"
+OUT="$SRC/submissions/03_computers_and_graphics_2026-09-23"
 TEX_BIN="${TEX_BIN:-$HOME/Library/TinyTeX/bin/universal-darwin}"
 
 export PATH="$TEX_BIN:$PATH"

@@ -9,7 +9,7 @@
 #      dir (no CVPR/MDPI files, no logs, no build artifacts).
 #   2. Does a fresh pdflatex+bibtex+pdflatex x2 build inside the staging dir to
 #      prove the package compiles stand-alone.
-#   3. Zips the staging dir into  dist/DPRNet_Neurocomputing_submission.zip
+#   3. Zips the staging dir inside the Neurocomputing submission archive.
 #
 # Usage:
 #   bash package_neurocomputing.sh
@@ -21,13 +21,15 @@ set -euo pipefail
 
 # Resolve the paper/ directory (this script lives in it).
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-STAGE="$SRC/dist/DPRNet_Neurocomputing_submission"
-ZIP="$SRC/dist/DPRNet_Neurocomputing_submission.zip"
+ARCHIVE_DIR="$SRC/submissions/01_neurocomputing_2026-07-29/distribution"
+STAGE="$ARCHIVE_DIR/DPRNet_Neurocomputing_submission"
+ZIP="$ARCHIVE_DIR/DPRNet_Neurocomputing_submission.zip"
 
 echo "==> Source dir : $SRC"
 echo "==> Staging dir: $STAGE"
 
 # ---- 1. Clean staging ------------------------------------------------
+mkdir -p "$ARCHIVE_DIR"
 rm -rf "$STAGE" "$ZIP"
 mkdir -p "$STAGE"
 
@@ -79,7 +81,7 @@ popd >/dev/null
 
 # ---- 4. Zip ----------------------------------------------------------
 echo "==> Zipping..."
-( cd "$SRC/dist" && zip -rq "DPRNet_Neurocomputing_submission.zip" "DPRNet_Neurocomputing_submission" )
+( cd "$ARCHIVE_DIR" && zip -rq "DPRNet_Neurocomputing_submission.zip" "DPRNet_Neurocomputing_submission" )
 
 echo ""
 echo "==================================================================="

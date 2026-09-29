@@ -4,9 +4,185 @@
 > 每次有实质进展，请更新「进度日志」与「当前快照」两节。
 
 > 📮 **投稿状态**：稿件已进入投稿阶段，逐次投稿台账见 `paper/plan/submission-log.md`。
-> 最新：**#3 Computers & Graphics（Elsevier/T4）已于 2026-09-23 编辑初筛拒稿**；
-> 稿号 `CAG-D-26-01076`，未送外审，决定信明确说明仅因主题与期刊 scope 不匹配，
-> 不评价技术质量。当前下一投为 **#4 The Visual Computer（Springer/T3，订阅无 APC）**。
+> 最新：**#4 The Visual Computer（Springer/T3）已于 2026-09-29 正式投稿**；
+> Springer Submission ID 为 `b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`，
+> 版本 `v.1.0`，当前状态为 **Technical Check in progress**。
+
+---
+
+## 2026-09-29 · The Visual Computer 正式投稿成功
+
+- **目标期刊**：The Visual Computer（Springer，学校 T3）。
+- **投稿日期**：2026-09-29；Article type 为 `Research`；评审方式为
+  `Single anonymous`。
+- **提交结果**：Springer 显示 `Submission received`，跟踪页状态为
+  `Technical Check in progress`。
+- **Submission ID**：`b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`；当前版本
+  `v.1.0`。该 UUID 是 Springer 投稿标识，不记作期刊正式稿号；后续若邮件给出
+  journal-specific manuscript number，应另行补录。
+- **作者信息**：Hainan Huang 为 Primary corresponding author，
+  `huanghainan.7@cug.edu.cn`，系统账户 ORCID 为 `0009-0002-6971-4311`；
+  Xiang Li 为第二作者，`lixiang@cug.edu.cn`。两位作者均关联 School of
+  Computer Science / Future City Campus 完整地址。
+- **提交文件**：上传 `manuscript_latex_source.zip`，Springer 成功识别其中
+  70 个文件并生成 33 页审稿 PDF；上传单页 `cover_letter_tvcj.pdf`。
+- **声明选择**：无利益冲突、无重复发表、无第三方授权材料、使用公开研究数据、
+  无外部资助；Data Availability 文本与稿件一致。Research Square / In Review
+  预印本选择 `No`。
+- **最终确认**：作者本人勾选 Springer publishing terms 并点击
+  `Submit manuscript`。
+- **本地归档**：投稿目录已改为
+  `paper/submissions/04_the_visual_computer_2026-09-29/`；新增
+  `submission_confirmation.txt` 和 Springer 生成的
+  `springer_generated_review.pdf`。
+- **下一步**：等待 Technical Check 邮件；若要求补充作者简介、照片或源文件，
+  当天处理并重新核验生成 PDF。系统分配期刊正式稿号或状态进入编辑处理/外审后，
+  立即更新本台账；当前不得向其他期刊或会议重复投稿。
+
+### Capability-use audit（2026-09-29 TVCJ submission）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  TRAE-browseruse, verification.
+- Skills actually used: 已读取并应用全部上述技能；浏览器流程覆盖账号验证、文件上传、
+  Details、Authors、Declarations、Review 和成功页。
+- Inputs consumed: TVCJ 投稿包、官方在线投稿表单、已确认的作者/机构信息、CRediT、
+  competing interests、data availability、funding 和 AI 声明。
+- Inputs not used and why: 投稿系统未提供作者简介或照片上传字段，未把两项材料作为
+  unrelated/supplementary file 强行上传；未选择 Research Square 预印本。
+- Artifacts produced: 正式在线投稿、`submission_confirmation.txt`、
+  `springer_generated_review.pdf`、更新后的投稿包路径和台账。
+- Verification run: 成功页显示 `Submission received`；跟踪页显示 Technical Check；
+  Springer LaTeX 转换成功；服务器生成 PDF 为 33 页，提取文本与本地 PDF 完全一致，
+  首页栅格哈希一致；作者、机构、通讯作者、声明和预印本选择均在 Review 页复核。
+- Remaining risk: 尚处技术检查阶段，并非已送外审；作者简介和黑白照片可能在技术
+  检查或修回阶段被要求补交。
+
+---
+
+## 2026-09-29 · 投稿包统一归档
+
+- 新建统一目录 `paper/submissions/`，按投稿顺序集中保存四套材料：
+  Neurocomputing、Machine Vision and Applications、Computers & Graphics、
+  The Visual Computer。
+- 原 Neurocomputing 完整源码分发目录及 ZIP 已并入
+  `01_neurocomputing_2026-07-29/distribution/`。
+- 四个目录分别带有期刊、日期或待投稿状态，根目录 `README.md` 汇总投稿结果；
+  原有 `paper/submit*` 目录已全部移除。
+- 旧 Springer 混合包中的 TVCJ 初版 cover letter 已移动到当前 TVCJ 包的
+  `archive/2026-08-01-cover-letter-draft/`，MVAP 历史包只保留本次 MVAP 投稿材料。
+- `make_submission_kit.sh`、`make_springer_kit.sh`、
+  `make_cag_submission_kit.sh`、`make_cag_submission_kit.py` 和
+  `make_tvcj_submission_kit.sh`、`package_neurocomputing.sh` 均已改为输出到
+  统一目录。
+- TVCJ 生成器改为仅刷新生成文件，不再删除整个投稿目录，因此后续补入的作者照片和
+  `archive/` 历史材料会被保留。
+
+### Capability-use audit（2026-09-29 submission-package consolidation）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, verification.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿归档维护。
+- Inputs consumed: 四个原投稿目录、Neurocomputing `dist/` 分发包、六个投稿包生成脚本、
+  投稿台账、两份 C&G 核验报告和既有包内 README。
+- Inputs not used and why: 未补造 C&G 系统审批 PDF、投稿回执或决定信原件；这些文件
+  当前不在仓库中。未修改任何论文实验、结果或声明内容。
+- Artifacts produced: `paper/submissions/README.md`、四个独立投稿包、更新后的生成器
+  与路径引用、本任务包。
+- Verification run: 24 个未重新生成的历史投稿文件与 76 个 Neurocomputing
+  `dist/` 文件在迁移后逐一 SHA-256 匹配；TVCJ 包在新路径重新生成并独立编译为
+  33 页，archive 哈希保持不变；Shell/Python 语法检查、ZIP/DOCX 完整性、PDF 页数、
+  旧目录扫描和 `git diff --check` 均通过。
+- Remaining risk: TVCJ 系统初投流程未出现作者照片上传字段；C&G 系统生成的
+  21 页审批 PDF 只有核验记录，当前仓库未保存原文件。
+
+---
+
+## 2026-09-29 · The Visual Computer 投稿包生成与核验
+
+- **阶段**：S5 Review / submission preparation；该阶段随后完成正式投稿。
+- **投稿目录**：`paper/submissions/04_the_visual_computer_2026-09-29/`，与历史
+  MVAP、C&G 投稿目录分离，避免覆盖既有投稿留档。
+- **主稿更新**：补齐 School of Computer Science、未来城校区完整地址、两位作者
+  邮箱和 PDF metadata；声明区改为 `Statements and Declarations`，新增无外部资助
+  和生成式 AI 辅助声明。AI 声明不列具体工具名，仅说明用于语言润色、可读性和
+  稿件结构组织，并明确作者承担全部责任。
+- **Cover letter**：日期更新为 September 29, 2026，直接对应 TVCJ 官方
+  `Image and Video Processing, Restoration, and Enhancement` 范围，保留
+  “不宣称优于 CATANet 的效率”边界，并压缩为单页。
+- **投稿辅助材料**：新增可复制的标题、摘要、关键词、作者、声明及审稿人专长字段；
+  两位作者英文简介分别为 57 和 59 词。未写入未经确认的学位、职称或 ORCID。
+- **构建脚本**：`paper/make_tvcj_submission_kit.sh` 会重编译主稿与 cover letter，
+  创建完整可编辑源 ZIP，在隔离目录中从零编译 ZIP 内容，并生成上传说明。
+- **当前唯一人工材料缺口**：TVCJ 要求每位作者提供黑白证件照；仓库中没有可信原图，
+  因此未生成或抓取替代图片。提交前需把两张作者确认的真实照片放入
+  `paper/submissions/04_the_visual_computer_2026-09-29/author_photos/`。
+
+### Capability-use audit（2026-09-29 TVCJ submission kit）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, latex-output, peer-review, verification.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段记录为 S5。
+- Inputs consumed: TVCJ 官方 scope、投稿指南和出版路线；既有 Springer 主稿；
+  C&G 投稿时已确认的作者邮箱、学院和未来城地址；既有 funding、CRediT、数据可用性
+  和 AI 辅助使用事实。
+- Inputs not used and why: 未使用 ORCID、学位、职称和作者照片，因为本地没有经过
+  作者确认的可靠材料；未改实验、结果、图表数据和论文结论。
+- Artifacts produced: `submissions/04_the_visual_computer_2026-09-29/`、
+  `make_tvcj_submission_kit.sh`、
+  `author_biographies_tvcj.txt`、`submission_metadata_tvcj.txt`、更新后的主稿和
+  TVCJ cover letter，以及本任务包。
+- Verification run: 主稿 33 页、cover letter 1 页；根目录和源 ZIP 独立编译均
+  通过；LaTeX 日志无 error、未定义引用或 Overfull box；摘要 242 词、关键词 6 个，
+  作者简介 57/59 词；ZIP 完整且不含 aux/log/PDF 等编译产物；PDF 文本抽查确认作者、
+  地址、声明和日期；目视检查主稿首页/末页及 cover letter；`git diff --check` 通过。
+- Remaining risk: 投稿系统初投流程未提供作者简介或照片上传字段；如技术检查或修回
+  阶段要求，应使用已准备的简介并补交真实黑白证件照。
+
+---
+
+## 2026-09-24 · 投稿候选严格范围复核
+
+- **触发原因**：此前把 C&G 列为免费首选时，使用了宽泛 scope 表述和一篇近期
+  SR 论文作为主要证据；实际投稿当天因 scope mismatch 被拒，说明单篇先例不足以
+  证明该方向属于编辑稳定接收的核心范围。
+- **新硬门槛**：学校 T4+ 名单精确匹配或确认官方/JCR 题名变体；官方 scope 明确
+  包含图像处理/恢复/增强；2024--2026 年至少 3 篇直接 SISR 论文；排除实时系统、
+  特定应用和极短篇幅等当前稿件不满足的隐藏门槛；分开评估 scope 与创新性风险。
+- **TVCJ 复核**：学校名单以 `VISUAL COMPUTER` 登记为 T3；官网明确包含
+  `Image and Video Processing, Restoration, and Enhancement`，2024--2026 年
+  连续刊发多篇 lightweight/efficient SISR。Scope 风险评为低，创新性风险评为中。
+- **IJPRAI 复核**：名单 T4；官网明确包含 Image Processing、Computer Vision 和
+  Deep Learning，2024--2025 年至少 4 篇直接 SISR。Scope 风险低，整体初筛风险
+  低至中；US$100 投稿费在任何拒稿情形下均不退。
+- **Algorithms 复核**：名单 T4；官网明确包含 Computer Vision 和 Image processing
+  with applications，2024--2026 年至少 3 篇直接 SISR。Scope 风险低，创新性风险
+  中高；当前为 ESCI 而非 SCIE，付费投稿前需确认学院是否另有索引硬要求。
+- **会议更新**：CVPR 2027 在名单中为 T2，2026-11-16 截稿、2027-02-25 最终决定，
+  但创新性风险高且评审期阻塞期刊主线，不作为快速毕业保底；WACV/3DV/ACCV/BMVC
+  当前窗口均已关闭；ICIP/ICASSP 未出现在本地 T4+ 名单中。
+- **当前顺序不变**：The Visual Computer → IJPRAI → Algorithms。变化的是证据
+  标准和风险表达，不再用主观录用概率，也不把低 scope 风险写成保证送外审。
+- 详细核验：`paper/plan/review/venue-search-audit-2026-09-24.md`。
+
+### Capability-use audit（2026-09-24 strict venue-scope revalidation）
+
+- Required skills: research-writing-assistant, using-research-writing,
+  paper-orchestration, peer-review, verification.
+- Skills actually used: 已读取并应用全部上述技能；任务阶段为 S5 投稿风险复核。
+- Inputs consumed: C&G scope 决定、学校 `计算机科学与技术.xlsx`、TVCJ/IJPRAI/
+  Algorithms 官方 scope 与费用/索引页面、CVPR 2027 官方 CFP、11 条近期直接 SR
+  论文 Crossref 元数据。
+- Inputs not used and why: 不再把 C&G 的单篇 2026 SR 先例作为稳定范围证据；
+  未采用出版社首决定数据推导录用概率。
+- Artifacts produced: 更新 `DPRNet_投稿推荐.csv`、本投稿台账、严格 venue audit；
+  将 2026-08-30 旧审计标记为失效；新增
+  `2026-09-24-strict-venue-scope-revalidation.md` 任务包。
+- Verification run: CSV 解析为 37 行、12 列且无坏行；11 条 DOI 全部由 Crossref
+  返回匹配题名；学校名单确认 `VISUAL COMPUTER` T3、IJPRAI/Algorithms T4、
+  CVPR T2，并确认 ICIP/ICASSP 未列入；官方页面复核三刊 scope；执行跨文档检索和
+  `git diff --check`。
+- Remaining risk: Scope 风险低不等于保证送外审；TVCJ 仍可能因贡献增量性被
+  desk reject，Algorithms 的 ESCI 身份仍需在付费前向学院确认。
 
 ---
 
@@ -23,7 +199,7 @@
   `Image Processing`，并将视觉计算定义为 graphics、vision 与 AI 的交叉；2026 年
   已刊发高效图像超分论文，范围证据显著强于 C&G。
 - **费用与复用**：选择 subscription publishing 无 APC；现有
-  `main_springer.tex`、`cover_letter_tvcj.txt` 和 `submit_springer/` 可复用，但
+  `main_springer.tex`、`cover_letter_tvcj.txt` 和历史 MVAP 投稿包可复用，但
   投稿前需刷新日期、作者学院/未来城地址、Xiang Li 邮箱及 50--100 词作者简介和照片。
 - **后续备选**：IJPRAI（T4，范围明确含 Image Processing / Computer Vision，
   但需支付不可退的 US$100 投稿费）；Algorithms（T4，CHF 1800 APC）仅作为付费快线。
@@ -61,7 +237,9 @@
 - **投稿日期**：2026-09-23。
 - **系统状态**：`Submitted to Journal`。
 - **投稿系统**：Editorial Manager，<https://www.editorialmanager.com/CAG>。
-- **合成审批 PDF**：`paper/submit_cag/CAG-S-26-01680.pdf`，共 21 页。
+- **合成审批 PDF**：
+  `paper/submissions/03_computers_and_graphics_2026-09-23/CAG-S-26-01680.pdf`，
+  共 21 页；该文件当前未保存在仓库中，仅保留核验记录。
 - **提交核验**：系统显示 `Submissions Being Processed for Author`，并列出正式稿号、
   Initial Date Submitted 和 `Submitted to Journal` 状态，证明投稿已完成，不再是
   `Incomplete` 或 `Waiting for Approval by Author`。
@@ -99,7 +277,8 @@
   Kyoung Mu Lee（韩国），备选 Yapeng Tian（美国）和 Pier Luigi Dragotti
   （英国）；均提供机构邮箱、推荐理由和官方来源。该文件仅供 Editorial Manager
   字段录入，不作为附件上传。
-- `paper/submit_cag/` 已重新生成；该阶段的“待提交”状态已在当日完成最终批准后
+- `paper/submissions/03_computers_and_graphics_2026-09-23/` 已重新生成；
+  该阶段的“待提交”状态已在当日完成最终批准后
   更新为 `Submitted to Journal`，正式稿号为 `CAG-D-26-01076`。
 - 最终核验报告：
   `paper/plan/review/cag-submission-readiness-2026-09-23.md`。
@@ -114,7 +293,7 @@
 - Inputs not used and why: 同机构的中国学者候选未列入最终四人名单，以满足 C&G
   对不同国家/地区候选人的多样性要求；未改共享正文、图表、实验或参考文献。
 - Artifacts produced: 更新后的 title page、cover letter、利益声明、DOCX 生成脚本、
-  `reviewer_suggestions_cag.txt`、`submit_cag/`、README、投稿台账和最终核验报告。
+  `reviewer_suggestions_cag.txt`、C&G 投稿目录、README、投稿台账和最终核验报告。
 - Verification run: 完整执行 `make_cag_submission_kit.sh`；检查三份 LaTeX 日志；
   用 Ghostscript 提取 PDF 文本并扫描匿名身份；用 Spotlight 核对页数和 metadata；
   校验四个 DOCX 的 ZIP/XML；核对 highlights 长度；渲染并目视检查 title page；
@@ -135,8 +314,8 @@
   与其路由机制的差异，并解释正文略超通常 12 页建议的必要性。
 - AI 声明置于匿名主稿参考文献之前；按作者要求不列具体工具名称，仅说明使用
   生成式 AI 进行语言、可读性和稿件组织调整，并明确由作者复核及承担责任。
-- 投稿目录：`paper/submit_cag/`。初投稿目录不含 LaTeX 源文件；文件上传映射见
-  `paper/submit_cag/README.txt`。
+- 投稿目录：`paper/submissions/03_computers_and_graphics_2026-09-23/`。
+  初投稿目录不含 LaTeX 源文件；文件上传映射见该目录下的 `README.txt`。
 - 截至 2026-09-01 当日仍是“待投稿”；该状态已由 2026-09-23 的正式投稿记录取代。
 
 ### Capability-use audit（2026-09-01 C&G submission kit）
@@ -150,7 +329,7 @@
   同机构和其他利益冲突；未把 LaTeX 源放入初投稿目录，因为 C&G 明确要求初投只交 PDF。
 - Artifacts produced: `main_cag_anonymous.*`、`title_page_cag.*`、
   `cover_letter_cag.*`、`highlights_cag.*`、两类声明、构建脚本、
-  `submit_cag/` 和 `plan/review/cag-submission-readiness-2026-09-01.md`。
+  C&G 投稿目录和 `plan/review/cag-submission-readiness-2026-09-01.md`。
 - Verification run: 清理后完整 LaTeX/BibTeX 重编译；PDF 文本与 metadata 匿名扫描；
   引用 key 对照；页数和 References 起始页检查；highlights 字符数检查；DOCX ZIP/XML
   完整性检查；16 页逐页渲染与图表版面目视检查；`git diff --check`。

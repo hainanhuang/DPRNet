@@ -28,7 +28,7 @@
   - `paper/reviewer_suggestions_cag.txt`
   - `paper/make_cag_submission_kit.py`
   - `paper/make_cag_submission_kit.sh`
-  - `paper/submit_cag/*`
+  - `paper/submissions/03_computers_and_graphics_2026-09-23/*`
   - `paper/plan/progress.md`
   - `paper/plan/submission-log.md`
   - `paper/plan/project-overview.md`
@@ -53,7 +53,7 @@
     the references in the anonymous manuscript.
   - Reviewer-suggestion reference containing institutional emails, expertise, and
     source URLs; it is not an upload unless the portal explicitly requests a file.
-  - `submit_cag/README.txt` with exact upload mapping.
+  - C&G package `README.txt` with exact upload mapping.
 - C&G hard requirements:
   - Double-anonymized review.
   - Double-column manuscript with line numbers.

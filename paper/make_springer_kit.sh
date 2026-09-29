@@ -1,25 +1,16 @@
 #!/usr/bin/env bash
 # =====================================================================
 # make_springer_kit.sh
-# Assemble a Springer submission kit for the two free-of-charge target
-# journals, reusing ONE compiled manuscript (main_springer.*):
-#
-#   MVAP  = Machine Vision and Applications   (primary,  T4, no APC)
-#   TVCJ  = The Visual Computer               (backup,   T3, subscription/no APC)
-#
-# Springer first-submission policy (verified 2026-08-01):
-#   - A single compiled PDF (figures embedded) is accepted for first
-#     submission; the exact sn-jnl.cls template is NOT required up front.
-#   - Editable LaTeX source is requested at revision/acceptance, so we also
-#     ship a self-contained, test-compiled source zip.
+# Rebuild the historical Machine Vision and Applications submission package
+# from the current Springer manuscript sources.
 #
 # Output layout:
-#   submit_springer/
+#   submissions/02_machine_vision_and_applications_2026-08-02/
 #     main_springer.pdf              <- MANUSCRIPT (single PDF, figures inline)
-#     manuscript_latex_source.zip    <- editable source (for revision/acceptance)
-#     cover_letter_mvap.txt          <- paste when submitting to MVAP  (primary)
-#     cover_letter_tvcj.txt          <- paste when submitting to TVCJ  (backup)
-#     README.txt                     <- what-to-upload-where cheat sheet
+#     manuscript_latex_source.zip    <- editable source
+#     cover_letter_mvap.pdf          <- submitted cover letter
+#     cover_letter_mvap.txt          <- cover-letter source
+#     README.txt                     <- archive record
 #
 # The source zip is test-compiled from scratch to prove it is self-contained.
 #
@@ -28,12 +19,16 @@
 # =====================================================================
 set -euo pipefail
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-OUT="$SRC/submit_springer"
+OUT="$SRC/submissions/02_machine_vision_and_applications_2026-08-02"
 SRCZIP_DIR="$OUT/_latex_src"
 ZIP="$OUT/manuscript_latex_source.zip"
 
-echo "==> Clean submit_springer/ ..."
-rm -rf "$OUT"; mkdir -p "$SRCZIP_DIR"
+echo "==> Refresh MVAP package ..."
+mkdir -p "$OUT"
+rm -rf "$SRCZIP_DIR"
+rm -f "$ZIP" "$OUT/main_springer.pdf" "$OUT/cover_letter_mvap.pdf" \
+  "$OUT/cover_letter_mvap.txt"
+mkdir -p "$SRCZIP_DIR"
 
 # ---- 1. Assemble the LaTeX-source-only manuscript ------------------
 #      (main_springer uses the standard 'article' class + shared sources;
@@ -69,44 +64,37 @@ popd >/dev/null
 ( cd "$SRCZIP_DIR" && zip -rq "$ZIP" . )
 rm -rf "$SRCZIP_DIR"
 
-# ---- 4. Drop the PDF + both cover letters --------------------------
+# ---- 4. Drop the PDF + MVAP cover letter ---------------------------
 cp "$SRC/main_springer.pdf"     "$OUT/"
+cp "$SRC/cover_letter_mvap.pdf" "$OUT/"
 cp "$SRC/cover_letter_mvap.txt" "$OUT/"
-cp "$SRC/cover_letter_tvcj.txt" "$OUT/"
 
 # ---- 5. What-to-upload cheat sheet ---------------------------------
 cat > "$OUT/README.txt" <<'EOF'
-DPRNet — Springer submission kit
-=================================
-Strategy: submit to ONE journal at a time (single-submission rule).
-  PRIMARY : Machine Vision and Applications (MVAP)  — T4, no APC
-  BACKUP  : The Visual Computer (TVCJ)              — T3, no APC (subscription)
-If MVAP rejects, submit the SAME files to TVCJ (swap the cover letter).
+DPRNet - Machine Vision and Applications submission archive
+============================================================
 
-Both journals use Springer's Editorial Manager. At FIRST submission upload:
+Journal: Machine Vision and Applications (Springer)
+Article type: Research
+Submitted: August 2, 2026
+Outcome: Withdrawn by the author on September 1, 2026
+Status before withdrawal: With editor
 
-  1. Manuscript .............. main_springer.pdf        (single PDF, figures inline)
-  2. Cover letter ............ paste cover_letter_mvap.txt   (MVAP)
-                               paste cover_letter_tvcj.txt   (TVCJ, if transferred)
-  3. Suggested reviewers ..... lightweight/efficient SR; vision Transformers for
-                               restoration; content-aware token routing/clustering
-  4. (keep ready) editable source .. manuscript_latex_source.zip
-                               Springer requests this at REVISION/ACCEPTANCE, not
-                               necessarily at first submission. Upload if asked.
+Archived materials:
+  manuscript_latex_source.zip
+  main_springer.pdf
+  cover_letter_mvap.pdf
+  cover_letter_mvap.txt
 
-Notes
------
-- main_springer.tex uses the standard 'article' class (single column, 12pt). This
-  is a valid editable-source first submission; Springer does not force sn-jnl.cls
-  up front. If accepted, re-typeset into sn-jnl.cls ([iicol]) for production.
-- Declarations (author contributions, competing interests, data availability) are
-  already in the manuscript back matter — no separate files needed for Springer.
-- Do NOT change the manuscript title/authors between MVAP and TVCJ; only the cover
-  letter differs.
+The preliminary TVCJ cover letter is archived separately under:
+  ../04_the_visual_computer_2026-09-29/archive/2026-08-01-cover-letter-draft/
+
+This was an author withdrawal driven by the graduation timeline, not an
+editorial rejection. Do not upload this historical package to another journal.
 EOF
 
 echo ""
 echo "==================================================================="
-echo " Springer submission kit ready in: $OUT"
+echo " MVAP submission archive refreshed in: $OUT"
 ls -1 "$OUT" | sed 's/^/   - /'
 echo "==================================================================="

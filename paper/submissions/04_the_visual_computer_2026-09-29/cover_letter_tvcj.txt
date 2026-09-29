@@ -1,0 +1,62 @@
+Cover Letter — The Visual Computer
+
+September 29, 2026
+
+Dear Editor-in-Chief and Editors of The Visual Computer,
+
+We are pleased to submit our manuscript entitled "Dynamic Prototype Routing for
+Lightweight Image Super-Resolution" for consideration as a research article in
+The Visual Computer.
+
+The journal's current scope explicitly includes "Image and Video Processing,
+Restoration, and Enhancement" at the intersection of computer vision, artificial
+intelligence, and graphics. Single image super-resolution directly addresses this area by
+recovering fine visual detail for display and downstream analysis. The journal has also
+continued to publish lightweight and efficient single-image super-resolution studies in
+recent volumes. Our manuscript addresses the same problem setting while contributing a
+distinct mechanism for confidence-aware token routing.
+
+CATANet's Token Aggregation Block groups related tokens before attention but depends on
+cross-batch EMA centers, hard assignment labels, and a coupled prototype
+update/confirmation step. We replace this router with Dynamic Prototype Routing (DPR), a
+drop-in module that preserves the backbone and external tensor interface. DPR forms
+per-image prototypes from current tokens, uses a learnable query bank to decouple prototype
+generation from confirmation, retains assignment confidence in token ordering, global
+gating, and a soft fallback, and combines a bounded routing temperature with a
+usage-balancing regularizer to discourage prototype-slot collapse.
+
+Across five benchmarks at x2/x3/x4, DPRNet matches CATANet-level accuracy with small gains
+on most benchmark cells; at x4, it obtains 26.89 dB on Urban100. DPR adds a modest cost over
+CATANet (660K vs 535K parameters; 52.14G vs 46.8G Multi-Adds), so we do not claim an
+efficiency advantage over CATANet. It remains in the lightweight regime and uses fewer
+Multi-Adds than SwinIR-light and SRFormer-light under the same input convention. Three-seed
+ablations show that dynamic prototypes outperform a matched EMA history-center variant and
+that the balancing loss improves both the balance and cross-seed stability of prototype
+usage. Routing diagnostics further expose the learned temperature, confidence distribution,
+usage entropy, and per-block cluster assignments.
+
+Because DPR is a plug-and-play, interface-preserving module, it is directly reusable in
+other window-attention visual-computing backbones. We believe this combination — a
+reusable content-routing component, an honest efficiency/accuracy characterization, and
+mechanism-level, visually interpretable analysis for image restoration — fits the stated
+scope and readership of The Visual Computer.
+
+This manuscript is original, has not been published previously, and is not under
+consideration for publication elsewhere. All authors have read and approved the
+manuscript and agree to its submission. The authors declare no competing interests and
+no external funding. All datasets used in the study are publicly available; no new data
+were generated.
+
+We suggest the following areas of expertise for reviewers: lightweight/efficient image
+super-resolution, vision Transformers for image restoration, and content-aware token
+routing / clustering.
+
+Thank you for your time and consideration. We look forward to your response.
+
+Sincerely,
+
+Hainan Huang (corresponding author), on behalf of all authors
+School of Computer Science, China University of Geosciences (Wuhan)
+Future City Campus, No. 68 Jincheng Street, East Lake High-tech Development Zone,
+Wuhan, Hubei 430078, China
+huanghainan.7@cug.edu.cn

@@ -1,6 +1,16 @@
 Computers & Graphics - Initial Submission Package
 =================================================
 
+Archive status:
+  Submitted: September 23, 2026
+  Manuscript number: CAG-D-26-01076
+  Outcome: Desk rejected on September 23, 2026 for scope mismatch
+  Peer review: Not initiated
+
+This directory preserves the local files used for that submission. The
+system-generated approval PDF referenced in the submission log is not present
+in the repository.
+
 Target journal:
   Computers & Graphics (ISSN 0097-8493)
   Do not select the separate journal Computers & Graphics: X.

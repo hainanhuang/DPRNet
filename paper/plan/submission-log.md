@@ -4,6 +4,8 @@
 > 配合「投稿漏斗」串行策略使用（一稿一投，被拒即转，见文末）。
 > 期刊级别以本人学校《计算机科学与技术》T4+ 毕业名单为准；推荐清单见
 > `/Users/bytedance/WorkSpace/DPRNet/DPRNet_投稿推荐.csv`。
+> 各次投稿的完整本地材料统一存放在 `paper/submissions/`，目录索引见其中
+> `README.md`。
 
 ---
 
@@ -14,7 +16,7 @@
 | 1 | Neurocomputing | T2 | Elsevier | 2026-07-29 | `main_els`（elsarticle 单栏） | ❌ Desk reject → **拒绝转投(ATS Declined)** | 2026-08-01 | 编辑初筛拒稿，转投候选无对口刊，已选 Do not transfer |
 | 2 | **Machine Vision and Applications (MVAP)** | T4 | Springer | **2026-08-02** | `main_springer`（价值锚点重构版） | ↩️ **作者主动撤稿** | **2026-09-01** | 撤稿时页面仍显示 `With editor`；因毕业时限不能接受预期长周期而撤回，非拒稿 |
 | 3 | **Computers & Graphics** | T4 | Elsevier | **2026-09-23** | `main_cag_anonymous`（双栏、行号、双匿名） | ❌ **Desk reject** | **2026-09-23** | 稿号 `CAG-D-26-01076`；未外审，仅因 scope mismatch |
-| 4 | **The Visual Computer (TVCJ)** | T3 | Springer | 待投稿 | `main_springer`（同一正文，换 Cover Letter） | 🛠️ **当前目标** | — | 订阅发表无 APC；官网明列 Image Processing 且有 2026 高效 SR 论文 |
+| 4 | **The Visual Computer (TVCJ)** | T3 | Springer | **2026-09-29** | `submissions/04_the_visual_computer_2026-09-29`（实名主稿 + 可编辑源 ZIP） | ⏳ **Technical Check** | — | Submission ID `b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`，版本 `v.1.0` |
 
 ---
 
@@ -46,7 +48,10 @@
 2. **投稿前必做（无论转投/重投）**：
    - **价值锚点重构**：Abstract/引言/效率段把卖点从"追平精度"改为"可解释、抗坍缩的置信度路由 + 即插即用 + 3-seed 扎实消融，仍显著轻于 SwinIR/SRFormer-light"。
    - **换针对性 Cover Letter**：正面预防"新意不足"质疑，突出 DPR 的机制贡献而非精度碾压。
-3. **下一个最佳落点（若 Decline）**：CVIU（T3/Elsevier/免费/可复用 elsarticle）为首选；备选 The Visual Computer（T3/Springer/免费）、Machine Vision and Applications（T4/Springer/免费，录取概率更高）。
+3. **当时的下一落点（若 Decline）**：CVIU（T3/Elsevier/免费/可复用
+   elsarticle）为首选；备选 The Visual Computer（T3/Springer/免费）和
+   Machine Vision and Applications（T4/Springer/免费）。该历史排序已由后续
+   实际投稿结果和 2026-09-24 严格范围复核取代。
 
 #### 执行记录（2026-08-01）
 
@@ -64,11 +69,16 @@
 
 - **背景**：用户先接受 ¥7000–10000 版面费，后明确"**我需要的只是中稿概率高的期刊**"；且核实 **IET Image Processing 实为纯 Gold OA、APC≈$2800≈¥2万（超预算，无免费通道）**，故放弃 IET-IP。
 - **决策**：不再走 Elsevier CVIU（避免与 #1 同体系连续 desk reject 风险），改为**两个免费 Springer 刊并行准备、串行投递**：
-  - **首投 = MVAP（Machine Vision and Applications，T4，Springer，免费，~70%）**——达标即毕业，命中率最高，且刊名直指 machine-vision applications，与本文"实用轻量 SR 模块"最契合。
-  - **备投 = The Visual Computer（TVCJ，T3，Springer，免费，~60%）**——MVAP 被拒即转，稿件与作者信息零重排。
+  - **首投 = MVAP（Machine Vision and Applications，T4，Springer，免费）**——达标即毕业，且刊名直指 machine-vision applications，与本文"实用轻量 SR 模块"较契合。
+  - **备投 = The Visual Computer（TVCJ，T3，Springer，免费）**——MVAP 被拒即转，稿件与作者信息零重排。
 - **稿件**：新建 `paper/main_springer.tex`（两刊共用）。因 `sn-jnl.cls` 不在 CTAN、本环境联网获取全部失败，改用标准 `article` 12pt 单栏类——Springer 首投接受可编辑源、不强制模板，录用后再套 `sn-jnl.cls [iicol]`。字体上用 `lmodern`+`T1` 绕过沙箱 pk 位图生成限制。**编译通过：33 页、0 undefined、44 条参考文献。**
 - **两封 Cover Letter 已就绪**：`cover_letter_mvap.txt` / `cover_letter_tvcj.txt`——正面预防"新意不足"（直述 TAB 四点缺陷 + DPR 机制贡献 + 即插即用可复用 + 诚实的精度/效率刻画 + 3-seed 消融）；仅刊名与"契合段"不同，稿件标题/作者一字不改。
-- **投稿套装**：`make_springer_kit.sh` → `submit_springer/`（`main_springer.pdf` 单一 PDF 主稿 + `manuscript_latex_source.zip` 可编辑源 + 两封 cover letter + `README.txt` 上传指引）。源 zip 已独立 test-compile 通过 33 页，证明自洽。Springer 声明（作者贡献/competing interest/data availability）已在稿件 back matter，无需单独文件。
+- **投稿套装**：`make_springer_kit.sh` →
+  `submissions/02_machine_vision_and_applications_2026-08-02/`
+  （`main_springer.pdf` 单一 PDF 主稿 + `manuscript_latex_source.zip` 可编辑源 +
+  MVAP cover letter + `README.txt`）。源 zip 已独立 test-compile 通过 33 页，
+  证明自洽。Springer 声明（作者贡献/competing interest/data availability）
+  已在稿件 back matter，无需单独文件。
 
 - **~~待办（投稿前必做项②）~~**：~~起草 CVIU 版 Cover Letter~~ → 已由 MVAP/TVCJ 两封 Cover Letter 取代（CVIU 路线已弃用）。
 
@@ -81,7 +91,8 @@
 - **投稿日期**：**2026-08-02**
 - **投稿系统**：Springer Nature 新版投稿平台 `submission.springernature.com`（已取代旧 Editorial Manager）
 - **Article type**：**Research**（非 Brief Report——后者篇幅受限会逼砍消融，而消融是本文对抗"新意不足"的核心武器）
-- **投稿稿件**：`paper/main_springer.tex` → `submit_springer/` 套装
+- **投稿稿件**：`paper/main_springer.tex` →
+  `paper/submissions/02_machine_vision_and_applications_2026-08-02/` 套装
   - 主稿以 **LaTeX 源 zip**（`manuscript_latex_source.zip`，含预编译 `.bbl`）上传，平台服务端自行编译（新版平台要求可编辑源，非传 PDF）。
   - Cover letter：`cover_letter_mvap.pdf`（本轮新建 `.tex` 源编译，2 页 PDF 文件上传）。
 - **投稿页逐项决策（备查/备投复用）**：
@@ -118,7 +129,8 @@
   China University of Geosciences (Wuhan), Future City Campus,
   No. 68 Jincheng Street, East Lake High-tech Development Zone, Wuhan,
   Hubei 430078, China。
-- **投稿包状态（2026-09-23）**：`paper/submit_cag/` 已重新生成，包含匿名主稿、
+- **投稿包状态（2026-09-23）**：
+  `paper/submissions/03_computers_and_graphics_2026-09-23/` 已重新生成，包含匿名主稿、
   title page、匿名 cover letter、highlights、Declaration of Interest、生成式 AI
   声明、审稿人字段参考和上传说明；cover letter 与利益声明日期均为
   September 23, 2026。
@@ -131,8 +143,10 @@
   Overfull box，PDF 正文与 metadata 未检出作者身份。
 - **提交文件类型**：Anonymised Cover Letter、Declaration of competing interests、
   Manuscript without author details、Highlights、Title page with author details。
-- **审批 PDF**：`paper/submit_cag/CAG-S-26-01680.pdf`，21 页；逐页核验内容完整，
-  匿名主稿未检出作者身份。该文件名不是正式稿号。
+- **审批 PDF**：
+  `paper/submissions/03_computers_and_graphics_2026-09-23/CAG-S-26-01680.pdf`，
+  21 页；逐页核验内容完整，匿名主稿未检出作者身份。该文件名不是正式稿号；
+  当前仓库未保留该系统生成文件，仅保留本核验记录。
 - **转投邮件**：Elsevier Transfer Your Manuscript Service 已发送候选刊推荐；未核验
   学校名单、方向和周期前不接受 transfer，无合适候选时选择 `Decline all`。
 - **下一步**：改投 The Visual Computer；不申诉、不向 C&G 重投。
@@ -140,25 +154,54 @@
 
 ---
 
-### 目标 #4 — The Visual Computer（Springer，T3）🛠️ 当前目标
+### 投稿 #4 — The Visual Computer（Springer，T3）⏳ Technical Check
 
-- **选择理由**：官网 scope 明确包含 `Image Processing`，并将 visual computing
-  定义为 graphics、computer vision 与 AI 的交叉；2026 年已刊发高效图像超分论文，
-  比 C&G 的范围匹配证据更直接。
+- **名单匹配**：学校名单以 JCR 题名 `VISUAL COMPUTER` 登记，级别 T3；对应
+  Springer 现刊名 The Visual Computer。
+- **选择理由**：官网 scope 明确包含 `Image and Video Processing, Restoration,
+  and Enhancement`，并将 visual computing 定义为 graphics、computer vision
+  与 AI 的交叉。2024--2026 年连续刊发多篇 lightweight/efficient SISR 论文，
+  包括 `10.1007/s00371-024-03753-0`、`10.1007/s00371-025-03894-w`、
+  `10.1007/s00371-026-04376-3` 和 `10.1007/s00371-026-04357-6`。该证据是稳定
+  同类发表记录，不再依赖单篇先例。
 - **费用**：Hybrid；录用后选择 subscription publishing，无 APC。
-- **现有基础**：`paper/main_springer.tex`、`paper/cover_letter_tvcj.txt` 和
-  `paper/submit_springer/` 可复用。
-- **投稿前更新**：
-  1. Cover letter 日期改为实际投稿日期，并明确引用 TVCJ 的 Image Processing
-     scope 和近期 efficient SR 先例；
+- **投稿日期**：2026-09-29。
+- **Submission ID**：`b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`；版本 `v.1.0`。
+  该 UUID 是当前 Springer 投稿标识，不等同于后续可能分配的期刊正式稿号。
+- **当前状态**：`Technical Check in progress`；系统已显示 `Submission received`，
+  尚未进入同行评审。
+- **投稿包状态（2026-09-29）**：
+  `paper/submissions/04_the_visual_computer_2026-09-29/` 已生成，包含 33 页实名主稿、
+  可编辑 LaTeX 源 ZIP、单页 cover letter（PDF/TXT）、可复制投稿元数据、两位作者
+  50--100 词简介、上传说明、提交确认记录及 Springer 生成的审稿 PDF。
+- **系统提交核验**：源 ZIP 被识别为 70 个文件，LaTeX 转换成功；服务器生成 PDF
+  为 33 页，提取文本与本地 PDF 完全一致，首页栅格一致。
+- **提交元数据**：Article type = Research；single-anonymous review；
+  Hainan Huang 为 Primary corresponding author，ORCID `0009-0002-6971-4311`；
+  Xiang Li 为第二作者。两位作者均关联计算机学院未来城校区完整地址。
+- **声明与选项**：无利益冲突、无重复发表、无第三方授权材料、使用公开研究数据、
+  无外部资助；拒绝 Research Square / In Review 预印本公开。
+- **已完成的投稿前更新**：
+  1. Cover letter 日期更新为 September 29, 2026，并明确对应 TVCJ 的
+     `Image and Video Processing, Restoration, and Enhancement` scope；
   2. 作者单位更新为 School of Computer Science / Future City Campus，Xiang Li
      邮箱更新为 `lixiang@cug.edu.cn`；
-  3. 按当前指南准备每位作者 50--100 词 biography 和黑白证件照；
-  4. 提交可编辑 Word 或 LaTeX 源文件，并重新执行完整编译与声明核验。
-- **风险边界**：官网的首决定中位数约 3 天包含 desk reject，不代表外审或录用周期；
-  既有近期样本中位数约 77 天也只是小样本历史，不是承诺。
+  3. 两位作者 biography 已生成，分别为 57 和 59 词；
+  4. 主稿声明补齐 funding 和生成式 AI 辅助说明；完整可编辑源文件已打包并验证。
+- **作者简介与照片**：初投系统未提供上传字段，因此没有作为 supplementary/related
+  file 强行上传；如技术检查或修回阶段要求，使用已准备的简介并补交真实黑白证件照。
+- **下一步**：等待 Technical Check 结果；补件通知当天处理。系统分配正式稿号或
+  状态进入编辑处理/同行评审后更新本记录；当前保持一稿一投。
+- **风险边界**：
+  - Scope 风险评为低，但不为零；低 scope 风险不等于保证送外审。
+  - 主要风险已转为创新性判断：DPRNet 相对 CATANet 的 PSNR 提升较小且计算量略高，
+    需持续突出 confidence-aware routing、动态原型和三随机种子受控消融。
+  - 官网的首决定中位数约 3 天包含 desk reject，不代表外审或录用周期；既有近期
+    样本中位数约 77 天也只是小样本历史，不是承诺。
 - **备选顺序**：IJPRAI（T4，US$100 不可退投稿费）→ Algorithms（T4，
-  CHF 1800 APC，付费快线）。
+  CHF 1800 APC，付费快线）。两刊官网均明确覆盖图像处理/计算机视觉，且分别有
+  至少 4 篇和 3 篇 2024--2026 直接 SR 论文；Algorithms 当前为 ESCI，付费投稿前
+  需确认学院是否另有 SCIE 硬要求。
 - **官方页面**：
   - <https://www.springer.com/journal/371>
   - <https://www.springer.com/journal/371/submission-guidelines>
@@ -180,7 +223,7 @@
 #3 Computers & Graphics (T4, Elsevier, 订阅免费)  ❌ scope desk reject 2026-09-23
       │  （未外审；技术质量未被否定）
       ▼
-#4 The Visual Computer (T3, Springer, 订阅免费)  🛠️ 当前目标
+#4 The Visual Computer (T3, Springer, 订阅免费)  ⏳ 2026-09-29 Technical Check
       │  被拒 → 转付费快线
       ▼
 IJPRAI (T4, World Scientific, 投稿费 US$100)
@@ -192,4 +235,6 @@ Algorithms (T4, MDPI, APC CHF 1800)
 - 模板成本：TVCJ 可复用 `main_springer` 正文，但需刷新作者信息、cover letter、
   biography 和照片；IJPRAI 需换 World Scientific 格式。
 - TVCJ 选择订阅发表路线，无 APC；Algorithms 是接受付费时的快速保底。
+- CVPR 2027 虽在学校名单中为 T2 且 2026-11-16 截稿，但创新性风险高、最终决定
+  到 2027-02-25，且评审期会阻塞期刊主线，因此不纳入快速毕业投稿漏斗。
 - 详见推荐表 `DPRNet_投稿推荐.csv`（含各刊级别、费用、周期、可行性和来源链接）。

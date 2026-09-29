@@ -4,7 +4,8 @@
 
 ## 结论
 
-`paper/submit_cag/` 已按作者确认的信息重新生成并通过最终本地核验。当前状态是
+`paper/submissions/03_computers_and_graphics_2026-09-23/`
+已按作者确认的信息重新生成并通过最终本地核验。当前状态是
 **已于 2026-09-23 正式投稿并在编辑初筛被拒**，Editorial Manager 稿号为
 `CAG-D-26-01076`。稿件未送外审；决定信明确说明拒稿仅因主题与期刊
 Editorial Scope 匹配度低，不反映技术价值或内在质量。

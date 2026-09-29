@@ -4,7 +4,7 @@
 # Assemble a Neurocomputing (Editorial Manager) submission kit with items
 # separated the way EM expects them:
 #
-#   submit/
+#   submissions/01_neurocomputing_2026-07-29/
 #     manuscript_latex_source.zip   <- MAIN MANUSCRIPT (LaTeX source only;
 #                                        EM compiles it online). No PDF/cover/
 #                                        highlights inside.
@@ -21,15 +21,20 @@
 # =====================================================================
 set -euo pipefail
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-OUT="$SRC/submit"
+OUT="$SRC/submissions/01_neurocomputing_2026-07-29"
 SRCZIP_DIR="$OUT/_latex_src"
 ZIP="$OUT/manuscript_latex_source.zip"
 
 echo "==> Rebuilding docx items..."
 python3 "$SRC/make_docx.py"
 
-echo "==> Clean submit/ ..."
-rm -rf "$OUT"; mkdir -p "$SRCZIP_DIR"
+echo "==> Refresh Neurocomputing package ..."
+mkdir -p "$OUT"
+rm -rf "$SRCZIP_DIR"
+rm -f "$ZIP" "$OUT/main_els.pdf" "$OUT/abstract.docx" \
+  "$OUT/highlights.docx" "$OUT/declaration_of_competing_interest.docx" \
+  "$OUT/cover_letter_neurocomputing.txt"
+mkdir -p "$SRCZIP_DIR"
 
 # ---- 1. Assemble the LaTeX-source-only manuscript ------------------
 cp "$SRC/main_els.tex" "$SRC/preamble_els.tex" "$SRC/references.bib" \
