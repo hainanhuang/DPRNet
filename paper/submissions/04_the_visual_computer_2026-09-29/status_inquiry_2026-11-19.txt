@@ -1,0 +1,23 @@
+To: visualcomputer@miralab.ch
+Subject: Status enquiry — Dynamic Prototype Routing for Lightweight Image Super-Resolution
+
+Dear TVC Editorial Office,
+
+I am writing to enquire about the progress of our manuscript, "Dynamic Prototype Routing for Lightweight Image Super-Resolution", submitted to The Visual Computer on September 29, 2026.
+
+Submission ID: b1c6e861-7da7-4e0d-bd7d-78c1af65f32a
+
+The tracking page currently shows that two reviewers have accepted the invitation and one reviewer report has been received, with the status remaining "Peer review".
+
+Could you please let us know whether additional reports are still awaited and, if available, the approximate timeframe for a first decision? As this work forms part of my graduate studies, an update would be helpful for my academic planning.
+
+We appreciate the time and effort of the editor and reviewers. Please let us know if any information or action is needed from our side.
+
+Thank you for your assistance.
+
+Kind regards,
+Hainan Huang
+Corresponding author
+School of Computer Science
+China University of Geosciences (Wuhan)
+huanghainan.7@cug.edu.cn

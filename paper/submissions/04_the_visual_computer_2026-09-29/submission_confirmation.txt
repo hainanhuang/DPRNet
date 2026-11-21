@@ -8,7 +8,11 @@ Peer review: Single anonymous
 Submission date: September 29, 2026
 Submission ID: b1c6e861-7da7-4e0d-bd7d-78c1af65f32a
 Submission version: v.1.0
-Current status: Technical Check in progress
+Current status: Peer review
+Status checked: November 19, 2026
+Tracking page last update: October 21, 2026
+Reviewer recruitment: more than 10 invited; 2 accepted the invitation
+Reviewer reports received: 1
 
 Primary corresponding author:
 Hainan Huang
@@ -44,11 +48,30 @@ Submission choices:
 
 Verification:
 - Springer displayed "Submission received".
-- Tracking page displayed "Technical check - in progress".
+- The initial tracking page displayed "Technical check - in progress".
 - Springer converted the LaTeX ZIP successfully.
 - The generated PDF has 33 pages.
 - Extracted text matches the local manuscript PDF.
 - The first-page raster matches the local manuscript PDF.
+- On October 16, 2026, the tracking page displayed
+  "Your submission is in peer review".
+- Technical check, editorial assignment, and the with-editor stage were
+  complete.
+- The editor had invited more than 10 reviewers, and 1 had accepted the
+  invitation. No submitted review report or editorial decision was shown.
+- The corresponding screenshot is status_peer_review_2026-10-16.png.
+- On November 19, 2026, the user-provided tracking-page screenshot showed
+  2 reviewers accepting the invitation and 1 report received by the editor.
+  The status remained Peer review; no editorial decision was shown.
+- The page displayed "Last update: 21 October 2026". This does not establish
+  the report submission date or whether further review activity has occurred.
+- The latest screenshot is status_peer_review_2026-11-19.png.
+
+Status enquiry:
+- Official journal contact: visualcomputer@miralab.ch
+- Source: https://link.springer.com/journal/371/contact-the-journal
+- Draft: status_inquiry_2026-11-19.txt
+- Sending status: draft prepared; not sent.
 
 The UUID above is the current Springer submission identifier. Record any later
 journal-specific manuscript number from the confirmation email separately.

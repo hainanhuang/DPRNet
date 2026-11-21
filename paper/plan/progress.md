@@ -6,7 +6,65 @@
 > 📮 **投稿状态**：稿件已进入投稿阶段，逐次投稿台账见 `paper/plan/submission-log.md`。
 > 最新：**#4 The Visual Computer（Springer/T3）已于 2026-09-29 正式投稿**；
 > Springer Submission ID 为 `b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`，
-> 版本 `v.1.0`，当前状态为 **Technical Check in progress**。
+> 版本 `v.1.0`。截至 2026-11-19，当前状态为 **Peer review**：编辑已邀请
+> 超过 10 名审稿人，2 名已接受邀请，已收到 1 份审稿报告；
+> 页面 `Last update` 显示 2026-10-21。
+
+---
+
+## 2026-11-19 · The Visual Computer 已收到一份审稿报告
+
+- **核查来源**：用户提供的最新 Springer 跟踪页截图；当前状态仍为 `Peer review`。
+- **实质进展**：相较 2026-10-16 的记录，接受邀请人数从 1 人增至 2 人，
+  编辑已收到 1 份审稿报告；累计邀请人数仍显示超过 10 人。
+- **时间边界**：页面 `Last update` 为 2026-10-21；截至核查日已投稿 51 天，
+  距页面最后更新 29 天。这不能证明此后无审稿活动，也不能确定报告提交日期、
+  另一位审稿人的截止日期、报告倾向或首轮决定日期。
+- **当前判断**：可能仍在等待其余报告或编辑处理，具体原因需由编辑部确认。
+  综合等待时长和毕业时间约束，建议现在礼貌询问一次进度。
+- **联系渠道**：期刊官方 `Contact the journal` 页面将投稿、同行评审和状态查询
+  指向 TVC Editorial Office：`visualcomputer@miralab.ch`。
+  来源：<https://link.springer.com/journal/371/contact-the-journal>。
+- **询问草稿**：
+  `paper/submissions/04_the_visual_computer_2026-09-29/status_inquiry_2026-11-19.txt`；
+  已准备，未发送。建议用通讯作者学校邮箱发送，询问是否还在等其他报告及能否提供
+  大致首轮决定时间；不要求立即作出决定。
+- **后续安排**：若发送后 7--10 个工作日无回复，可沿原邮件线程跟进一次；
+  这是本次建议，并非期刊承诺的回复期限。当前继续等待，不建议仅凭截图撤稿。
+- **截图留档**：
+  `paper/submissions/04_the_visual_computer_2026-09-29/status_peer_review_2026-11-19.png`。
+- **能力与验证记录**：应用 research-guide、research-writing-assistant、
+  using-research-writing 和 verification；核对新旧截图、既有投稿记录及官方联系页，
+  同步活动状态摘要并校验截图副本。未访问投稿账户、未发送邮件；未推断未显示的
+  审稿期限、正式稿号或录用概率。
+
+---
+
+## 2026-10-16 · The Visual Computer 进入同行评审
+
+- **当前状态**：Springer 跟踪页显示 `Your submission is in peer review`。
+- **流程进展**：`Submission received`、`Technical check`、
+  `Editorial assignment` 和 `With editor` 均已完成，说明稿件已通过技术检查和
+  编辑初筛，正式进入外审阶段。
+- **邀审情况**：编辑已邀请超过 10 名审稿人，其中 1 名已接受审稿邀请。
+- **状态边界**：`accepted to review` 仅表示该审稿人同意审稿，不表示已提交审稿
+  意见；当前页面也未显示已完成的审稿报告或编辑决定。编辑仍可能继续邀请审稿人。
+- **下一步**：无需补件或主动联系编辑，继续等待审稿人接受邀请和提交报告；保持
+  一稿一投，并留意 Springer 邮件及状态变化。
+- **本地留档**：状态截图保存为
+  `paper/submissions/04_the_visual_computer_2026-09-29/status_peer_review_2026-10-16.png`。
+
+### Capability-use audit（2026-10-16 TVCJ peer-review status）
+
+- Required skills: research-writing-assistant, using-research-writing.
+- Skills actually used: 已读取并应用上述技能；本次仅更新投稿状态与证据边界。
+- Inputs consumed: 2026-10-16 Springer 跟踪页截图、既有投稿台账和 TVCJ 投稿记录。
+- Inputs not used and why: 未访问投稿系统或邮件，截图未显示正式稿号、审稿截止日期、
+  已提交报告数量或预计决定日期，因此不补写这些信息。
+- Artifacts produced: 外审状态截图留档及进度、投稿台账、项目概览和投稿包状态更新。
+- Verification run: 截图文字与流程节点人工核对；状态字段全局检索复核。
+- Remaining risk: 当前仅 1 名审稿人接受邀请，尚无证据表明审稿报告已经提交，也不能
+  据此估计首轮决定日期或录用概率。
 
 ---
 
@@ -35,9 +93,8 @@
   `paper/submissions/04_the_visual_computer_2026-09-29/`；新增
   `submission_confirmation.txt` 和 Springer 生成的
   `springer_generated_review.pdf`。
-- **下一步**：等待 Technical Check 邮件；若要求补充作者简介、照片或源文件，
-  当天处理并重新核验生成 PDF。系统分配期刊正式稿号或状态进入编辑处理/外审后，
-  立即更新本台账；当前不得向其他期刊或会议重复投稿。
+- **当时的下一步（已完成）**：等待 Technical Check 结果；2026-10-16 跟踪页已
+  进入 Peer review，未显示需要补交作者简介、照片或源文件。
 
 ### Capability-use audit（2026-09-29 TVCJ submission）
 
@@ -54,8 +111,8 @@
 - Verification run: 成功页显示 `Submission received`；跟踪页显示 Technical Check；
   Springer LaTeX 转换成功；服务器生成 PDF 为 33 页，提取文本与本地 PDF 完全一致，
   首页栅格哈希一致；作者、机构、通讯作者、声明和预印本选择均在 Review 页复核。
-- Remaining risk: 尚处技术检查阶段，并非已送外审；作者简介和黑白照片可能在技术
-  检查或修回阶段被要求补交。
+- Remaining risk at submission: 当时尚处技术检查阶段；该阶段现已通过。作者简介
+  和黑白照片仍可能在修回阶段被要求补交。
 
 ---
 

@@ -6,7 +6,11 @@ Article type: Research
 Peer review: single-blind; keep author information in the manuscript
 Publishing route after acceptance: subscription (no APC)
 Submitted: September 29, 2026
-Status: Technical Check in progress
+Status: Peer review
+Status checked: November 19, 2026
+Tracking page last update: October 21, 2026
+Reviewer recruitment: more than 10 invited; 2 accepted the invitation
+Reviewer reports received: 1
 Submission ID: b1c6e861-7da7-4e0d-bd7d-78c1af65f32a
 Submission version: v.1.0
 
@@ -41,6 +45,23 @@ Copyable submission fields
 Submission record and follow-up
 -------------------------------
 - The final submission was confirmed by the corresponding author.
+- The tracking page showed "Your submission is in peer review" on October 16,
+  2026. Technical check, editorial assignment, and the with-editor stage were
+  complete.
+- The editor had invited more than 10 reviewers, and 1 had accepted the
+  invitation. This does not mean that a review report had been submitted.
+- status_peer_review_2026-10-16.png preserves the corresponding tracking-page
+  evidence.
+- On November 19, 2026, the new screenshot showed 2 reviewers accepting the
+  invitation and 1 report received. The status remained Peer review, and the
+  page displayed "Last update: 21 October 2026".
+- status_peer_review_2026-11-19.png preserves this latest observation.
+- The last-update field does not establish the report submission date,
+  reviewer deadlines, or absence of subsequent review activity.
+- A polite status enquiry is prepared in status_inquiry_2026-11-19.txt.
+  It has not been sent. The official journal contact page lists
+  visualcomputer@miralab.ch for submission and peer-review status enquiries:
+  https://link.springer.com/journal/371/contact-the-journal
 - The system account identifies Hainan Huang with ORCID
   0009-0002-6971-4311.
 - The submission system did not expose an author-biography or photograph

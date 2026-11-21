@@ -8,7 +8,7 @@ Each directory is self-contained and has its own upload/status README.
 | 1 | Neurocomputing | 2026-07-29 | Desk rejected on 2026-08-01 | `01_neurocomputing_2026-07-29/` |
 | 2 | Machine Vision and Applications | 2026-08-02 | Withdrawn by the author on 2026-09-01 | `02_machine_vision_and_applications_2026-08-02/` |
 | 3 | Computers & Graphics | 2026-09-23 | Desk rejected for scope mismatch on 2026-09-23 | `03_computers_and_graphics_2026-09-23/` |
-| 4 | The Visual Computer | 2026-09-29 | Submitted; Technical Check in progress | `04_the_visual_computer_2026-09-29/` |
+| 4 | The Visual Computer | 2026-09-29 | Peer review; >10 invited, 2 accepted, 1 report received as checked on 2026-11-19 | `04_the_visual_computer_2026-09-29/` |
 
 ## Rules
 

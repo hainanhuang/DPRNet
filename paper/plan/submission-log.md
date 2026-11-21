@@ -16,7 +16,7 @@
 | 1 | Neurocomputing | T2 | Elsevier | 2026-07-29 | `main_els`（elsarticle 单栏） | ❌ Desk reject → **拒绝转投(ATS Declined)** | 2026-08-01 | 编辑初筛拒稿，转投候选无对口刊，已选 Do not transfer |
 | 2 | **Machine Vision and Applications (MVAP)** | T4 | Springer | **2026-08-02** | `main_springer`（价值锚点重构版） | ↩️ **作者主动撤稿** | **2026-09-01** | 撤稿时页面仍显示 `With editor`；因毕业时限不能接受预期长周期而撤回，非拒稿 |
 | 3 | **Computers & Graphics** | T4 | Elsevier | **2026-09-23** | `main_cag_anonymous`（双栏、行号、双匿名） | ❌ **Desk reject** | **2026-09-23** | 稿号 `CAG-D-26-01076`；未外审，仅因 scope mismatch |
-| 4 | **The Visual Computer (TVCJ)** | T3 | Springer | **2026-09-29** | `submissions/04_the_visual_computer_2026-09-29`（实名主稿 + 可编辑源 ZIP） | ⏳ **Technical Check** | — | Submission ID `b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`，版本 `v.1.0` |
+| 4 | **The Visual Computer (TVCJ)** | T3 | Springer | **2026-09-29** | `submissions/04_the_visual_computer_2026-09-29`（实名主稿 + 可编辑源 ZIP） | 🔎 **Peer review** | — | 截至 2026-11-19：已邀请 >10 人，2 人接受，收到 1 份报告；页面最后更新 2026-10-21，无编辑决定 |
 
 ---
 
@@ -154,7 +154,7 @@
 
 ---
 
-### 投稿 #4 — The Visual Computer（Springer，T3）⏳ Technical Check
+### 投稿 #4 — The Visual Computer（Springer，T3）🔎 Peer review
 
 - **名单匹配**：学校名单以 JCR 题名 `VISUAL COMPUTER` 登记，级别 T3；对应
   Springer 现刊名 The Visual Computer。
@@ -168,8 +168,14 @@
 - **投稿日期**：2026-09-29。
 - **Submission ID**：`b1c6e861-7da7-4e0d-bd7d-78c1af65f32a`；版本 `v.1.0`。
   该 UUID 是当前 Springer 投稿标识，不等同于后续可能分配的期刊正式稿号。
-- **当前状态**：`Technical Check in progress`；系统已显示 `Submission received`，
-  尚未进入同行评审。
+- **当前状态（2026-11-19 核查）**：`Your submission is in peer review`。
+  `Technical check`、`Editorial assignment` 和 `With editor` 均已完成，稿件已通过
+  技术检查和编辑初筛并进入外审。
+- **审稿进展（2026-11-19 核查）**：编辑已邀请超过 10 名审稿人，2 名接受邀请，
+  已收到 1 份审稿报告；尚未显示编辑决定。2026-10-16 留档时为 1 人接受邀请，
+  未显示报告提交。
+- **页面最后更新**：`21 October 2026`。不能据此确定报告提交日期或判断此后是否
+  仍有审稿活动。
 - **投稿包状态（2026-09-29）**：
   `paper/submissions/04_the_visual_computer_2026-09-29/` 已生成，包含 33 页实名主稿、
   可编辑 LaTeX 源 ZIP、单页 cover letter（PDF/TXT）、可复制投稿元数据、两位作者
@@ -190,12 +196,18 @@
   4. 主稿声明补齐 funding 和生成式 AI 辅助说明；完整可编辑源文件已打包并验证。
 - **作者简介与照片**：初投系统未提供上传字段，因此没有作为 supplementary/related
   file 强行上传；如技术检查或修回阶段要求，使用已准备的简介并补交真实黑白证件照。
-- **下一步**：等待 Technical Check 结果；补件通知当天处理。系统分配正式稿号或
-  状态进入编辑处理/同行评审后更新本记录；当前保持一稿一投。
+- **下一步**：考虑已投稿 51 天及毕业时间约束，建议礼貌询问一次进度。
+  官方联系邮箱为 `visualcomputer@miralab.ch`；英文询问草稿
+  `status_inquiry_2026-11-19.txt` 已准备但未发送。若发送后 7--10 个工作日无回复，
+  可沿原线程跟进一次；继续保持一稿一投。
 - **风险边界**：
-  - Scope 风险评为低，但不为零；低 scope 风险不等于保证送外审。
-  - 主要风险已转为创新性判断：DPRNet 相对 CATANet 的 PSNR 提升较小且计算量略高，
-    需持续突出 confidence-aware routing、动态原型和三随机种子受控消融。
+  - 本轮投稿已通过编辑初筛，先前的 scope desk-reject 风险不再是当前阶段的主要
+    风险。
+  - 主要风险已转为外审中的创新性和技术判断：DPRNet 相对 CATANet 的 PSNR 提升
+    较小且计算量略高，需在可能的修回中继续突出 confidence-aware routing、
+    动态原型和三随机种子受控消融。
+  - 当前 2 名接受邀请，已收到 1 份报告；可能仍在等其余报告或编辑处理，具体原因
+    未确认。报告数量不表明报告倾向，也不能据此预测首轮决定日期。
   - 官网的首决定中位数约 3 天包含 desk reject，不代表外审或录用周期；既有近期
     样本中位数约 77 天也只是小样本历史，不是承诺。
 - **备选顺序**：IJPRAI（T4，US$100 不可退投稿费）→ Algorithms（T4，
@@ -203,6 +215,7 @@
   至少 4 篇和 3 篇 2024--2026 直接 SR 论文；Algorithms 当前为 ESCI，付费投稿前
   需确认学院是否另有 SCIE 硬要求。
 - **官方页面**：
+  - <https://link.springer.com/journal/371/contact-the-journal>
   - <https://www.springer.com/journal/371>
   - <https://www.springer.com/journal/371/submission-guidelines>
   - <https://www.springer.com/journal/371/how-to-publish-with-us>
@@ -223,7 +236,8 @@
 #3 Computers & Graphics (T4, Elsevier, 订阅免费)  ❌ scope desk reject 2026-09-23
       │  （未外审；技术质量未被否定）
       ▼
-#4 The Visual Computer (T3, Springer, 订阅免费)  ⏳ 2026-09-29 Technical Check
+#4 The Visual Computer (T3, Springer, 订阅免费)  🔎 2026-11-19 Peer review
+      │  （已邀 >10 人，2 人接受，收到 1 份报告；尚无决定）
       │  被拒 → 转付费快线
       ▼
 IJPRAI (T4, World Scientific, 投稿费 US$100)

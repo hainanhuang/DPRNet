@@ -15,7 +15,8 @@
 - 当前阶段：实验和正文已完成；Neurocomputing 已 desk reject，MVAP 已于
   2026-09-01 主动撤稿；Computers & Graphics 于 2026-09-23 因 scope mismatch
   编辑初筛拒稿、未外审；The Visual Computer 已于 2026-09-29 正式投稿，
-  当前处于 Technical Check
+  截至 2026-11-19 处于同行评审，编辑已邀请超过 10 名审稿人，2 名接受邀请，
+  已收到 1 份报告；页面最后更新为 2026-10-21，已准备进度询问草稿但未发送
 
 ## 研究信息
 
